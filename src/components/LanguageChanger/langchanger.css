@@ -1,0 +1,92 @@
+.lang-selector-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.lang-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.form-select {
+    border: 2px solid var(--maincolor);
+    border-radius: 8px;
+    padding: 5px 40px 5px 10px;
+    background-color: white;
+    color: #7C3AED;
+    width: 103px;
+    height: 40px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' color='%237C3AED' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%237C3AED' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: start;
+    line-height: 15px;
+    cursor: pointer;
+    background-position: end;
+    padding-left: 33px !important;
+
+}
+
+.form-select option {
+    border-radius: 0;
+    text-align: start;
+}
+
+.form-select option:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--maincolor);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-select:hover {
+    border-color: var(--maincolor);
+}
+
+.lang-selector-wrapper::before {
+    content: url('./../../assets/img/global1.svg');
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+}
+
+
+@media only screen and (max-width:1350px) {
+    .form-select{
+        font-size: 16px;
+        width: 100px;
+        height: 35px;
+        margin-top: 5px;
+    }
+    .lang-selector-wrapper::before{
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        top: 17px;
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .form-select{
+        font-size: 16px;
+        width: 100px;
+        height: 40px;
+        margin-top: 0px;
+    }
+}
