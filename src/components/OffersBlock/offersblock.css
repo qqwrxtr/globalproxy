@@ -12,7 +12,7 @@
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
-    padding: 35px 0;
+    padding: 35px 40px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -37,13 +37,14 @@
 }
 
 .price_block{
-    width: 355px;
+    width: 375px;
     height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
     row-gap: 15px;
     flex-direction: column;
+    margin-left: 15px;
 }
 
 .price{
@@ -92,7 +93,6 @@
 
 .operators_img img{
     width: auto;
-    height: 40px;
 }
 
 .operators_title{

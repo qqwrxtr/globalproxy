@@ -20,7 +20,7 @@ const OffersBlock = (props) => {
                 </div>
             </div>
             <div className="block2">
-                <div className="price_block d-flex flex-column align-items-center">
+                <div className="price_block d-flex flex-column align-items-center justify-content-center">
                     <div className="price1">
                         <p className="position-relative">
                             <span className="dollar">$</span>
@@ -52,7 +52,7 @@ const OffersBlock = (props) => {
                 </div>
                 <div className="operators_img">
                     {operatorImages.map((img , index) => (
-                        <img src={img} alt="" key={index} />
+                        <img src={img} alt="" key={index} style={{height:props.imgheight}}/>
                     ))}
                 </div>
                 </div>
