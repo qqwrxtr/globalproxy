@@ -1,5 +1,5 @@
 import "./banner.css"
-import main_bg from "./../../assets/video/mainbg.mp4"
+import main_bg from "./../../assets/video/mianbg.gif"
 import { useTranslation } from "react-i18next";
 
 const Banner = () => {
@@ -10,9 +10,7 @@ const Banner = () => {
         <div className="banner_container">
             <div className="row">
                 <div className="absolute_bg container-fluid">
-                    <video autoPlay muted loop playsinline>
-                        <source src={main_bg} type="video/mp4"/>
-                    </video>
+                    <img src={main_bg} alt="" />
                 </div>
             </div>
             <div className="row d-flex flex-column align-items-center text-center text_banner">

@@ -1,6 +1,7 @@
 import './App.css';
 import Banner from './components/Banner/Banner';
 import Header from './components/Header/Header';
+import InfoBlock from './components/InfoAbt/Infoabt';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       </header>
       <main className='d-flex flex-column justify-content-center align-items-center'>
         <Banner/>
+        <InfoBlock/>
       </main>
     </div>
   );
