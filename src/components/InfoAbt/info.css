@@ -16,11 +16,30 @@
     column-gap: 50px;
     box-shadow: 0px 7px 23.2px 7px rgba(123, 0, 211, 0.5);
     margin-bottom: 55px;
+    flex-wrap: nowrap !important;
+}
+
+.container_info p{
+    margin-bottom: 0 !important;
+}
+
+.row_blocks{
+    gap: 20px;
+}
+
+.info_block{
+    height: 110px;
+    max-width: 260px;
+    width: 100%;
 }
 
 .title_info_abt{
     font-size: 29px;
     font-weight: bold;
+}
+
+.subtitle_info_abt{
+    font-size: 20px;
 }
 
 .vr{
@@ -29,4 +48,97 @@
     color: white !important;
     padding: 0 !important;
     opacity: 1;
+    margin-top: -10px;
 }
+
+.vr2{
+    height: 2px !important;
+    width: 100px !important;
+    color: white !important;
+    padding: 0 !important;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width:1585px) {
+    .title_info_abt{
+        font-size: 27px;
+    }
+    .info_block{
+        height: 120px;
+        max-width: 240px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1420px) {
+    .title_info_abt{
+        font-size: 25px;
+    }
+    .subtitle_info_abt{
+        font-size: 18px;
+    }
+    .row_blocks{
+        gap: 10px;
+    }
+    .info_block{
+        height: 120px;
+        max-width: 220px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .bg_color{
+        width: 70%;
+        height: 450px;
+    }
+    .info_block{
+        max-width: 270px;
+        width: 100%;
+    }
+    .title_info_abt{
+        font-size: 28px;
+    }
+    .subtitle_info_abt{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .bg_color{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:696px) {
+    .row_blocks {
+        flex-wrap: nowrap !important;
+        display: grid !important;
+        grid-template-columns: 2fr .01fr 2fr;
+        grid-template-rows: 2fr 2fr;
+    }
+    
+    .row_blocks > .last-row-item {
+        grid-column: span 3;
+    }  
+}
+
+@media only screen and (max-width:575px) {
+    .row_blocks {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        row-gap: 20px;
+    }
+    .bg_color{
+        height: 700px;
+        padding: 0 !important;
+    }
+    .border-btm-sm{
+        border-bottom: 2px solid white;
+        padding-top: 30px;
+    }
+    .info_block{
+        height: 100px;
+    }
+}
+

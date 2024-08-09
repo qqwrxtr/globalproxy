@@ -9,7 +9,7 @@ const Header = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="container">
+        <div className="container container_header">
             <div className="row">
                 <nav className="navbar navbar-expand-xl">
                     <div className="container-fluid">

@@ -2,6 +2,14 @@ a{
     text-decoration: none;
 }
 
+.container_header{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -34,9 +42,33 @@ a{
     color: var(--maincolor);
 }
 
-.nav-link:hover{
+.nav-link {
+    position: relative;
+    color: var(--maincolor);
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--maincolor);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    background-color: var(--hovermain);
+}
+
+.nav-link:hover {
     color: var(--hovermain);
 }
+
 
 .registere button{
     background-color: var(--maincolor);
