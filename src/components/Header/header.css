@@ -145,11 +145,21 @@ a{
     }
 }
 
-@media only screen and (max-width:470px) {
-    .txt_logo{
-        display: none !important;
-    }
+@media only screen and (max-width:470px) {  
     .navbar{
         padding: 20px 10px 0;
+    }
+}
+
+@media only screen and (max-width:380px) {  
+   .txt_logo{
+    font-size: 16px !important;
+    padding-left: 5px !important;
+   }
+}
+
+@media only screen and (max-width:330px) {  
+    .txt_logo{
+        display: none !important;
     }
 }
