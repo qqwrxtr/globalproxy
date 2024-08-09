@@ -1,0 +1,181 @@
+.banner_container{
+    max-width: 2000px;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.text_banner{
+    color: white;
+}
+
+.absolute_bg {
+    max-width: 2000px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+}
+
+.absolute_bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(12px);
+    -webkit-transform: translateX(12px);
+    -moz-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    -o-transform: translateX(12px);
+}
+
+.title_banner h2{
+    font-size: 64px;
+    font-weight: bold; 
+}
+
+.subtitle p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.main_color{
+    color: var(--maincolor);
+}
+
+.sign_up_now_button a p{
+    margin: 0;
+}
+
+.sign_up_now_button a{
+    width: 220px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+
+.column_content_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    padding: 90px 50px;
+    max-width: 1000px;
+}
+
+@media only screen and (max-width:1200px) {
+    .title_banner h2{
+        font-size: 57px;
+    }
+    .subtitle p{
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width:1060px) {
+    .title_banner h2{
+        font-size: 54px;
+    }
+    
+}
+
+@media only screen and (max-width:967px) {
+    .title_banner h2{
+        font-size: 48px;
+    }
+    .subtitle p{
+        font-size: 16px;
+    }
+    .column_content_banner{
+        height: 400px;
+        padding: 75px 60px;
+    }
+    .banner_container{
+        height: 400px;
+    }
+    .absolute_bg{
+        height: 400px;
+    }
+    .sign_up_now_button a{
+        font-size: 18px;
+        width: 200px;
+        height: 55px;
+    }
+
+}
+
+@media only screen and (max-width:630px) {
+    .title_banner h2{
+        font-size: 44px;
+    }
+    .subtitle p{
+        font-size: 15px;
+    }
+    .column_content_banner{
+        height: 370px;
+        padding: 60px 60px;
+    }
+    .banner_container{
+        height: 370px;
+    }
+    .absolute_bg{
+        height: 370px;
+    }
+    .sign_up_now_button a{
+        font-size: 16px;
+        width: 170px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width:582px) {
+    .column_content_banner{
+        padding: 40px 60px;
+    }
+}
+
+
+@media only screen and (max-width:380px) {
+    .title_banner h2{
+        font-size: 40px;
+    }
+    .subtitle p{
+        font-size: 13px;
+    }
+    .sign_up_now_button a{
+        font-size: 14px;
+        width: 140px;
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width:324px) {
+    .title_banner h2{
+        font-size: 35px;
+    }   
+}
+
+@media only screen and (max-width:300px) {
+    .title_banner h2{
+        font-size: 30px;
+    }
+    .subtitle p{
+        font-size: 12px;
+    }
+    .column_content_banner{
+        padding: 50px 40px;
+    }
+}

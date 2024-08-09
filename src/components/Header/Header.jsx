@@ -26,7 +26,7 @@ const Header = () => {
                             <LangChanger />
                             <div className="log_register" style={{height:"40px",margin:"0 10px"}}>
                                 <div className="registere me-xl-2 mb-2 mb-xl-0">
-                                    <a href="https://proxy-lab.com/register">
+                                    <a href="https://proxy-lab.com/register" target="_blank">
                                         <button className="buton register">
                                             <div className="icon">
                                                 <img src={registericon} alt="Register Icon" />
@@ -38,7 +38,7 @@ const Header = () => {
                                     </a>
                                 </div>
                                 <div className="login">
-                                    <a href="https://proxy-lab.com/login">
+                                    <a href="https://proxy-lab.com/login" target="_blank">
                                         <button className="buton login">
                                             <div className="txt_login">
                                                 <p>Sign In</p>
