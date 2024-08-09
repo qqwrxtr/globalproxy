@@ -1,0 +1,125 @@
+.offers_block p{
+    margin: 0;
+}
+
+.offers_block{
+    margin-bottom: 150px;
+    background-color: var(--maincolor);
+    width: 465px;
+    height: 671px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 35px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 41.5px -6px var(--maincolor);
+    color: white;
+    row-gap: 47px;
+}
+
+.txt_title_blocks{
+    font-weight: bold;
+    font-size: 24px;
+    padding-right: 16px;
+}
+
+.subtitle_offers{
+    margin-top: 10px;
+    width: 341px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: medium;
+}
+
+.price_block{
+    width: 355px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    flex-direction: column;
+}
+
+.price{
+    font-size: 48px;
+    font-weight: bold;
+    padding-right: 9px;
+}
+
+.price2 img{
+    transform: translate(-50px,-38px);
+    -webkit-transform: translate(-50px,-38px);
+    -moz-transform: translate(-50px,-38px);
+    -ms-transform: translate(-50px,-38px);
+    -o-transform: translate(-50px,-38px);
+    width: 365px;
+}
+
+.time_price{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dollar{
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.operators_img{
+    width: 341px;
+    height: 58px;
+    border-radius: 62px;
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    -ms-border-radius: 62px;
+    -o-border-radius: 62px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 38px;
+    margin-top: 5px;
+}
+
+.operators_img img{
+    width: auto;
+    height: 40px;
+}
+
+.operators_title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buy_now {
+    margin-top: 15px;
+}
+
+.buy_now button{
+    background-color: white;
+    color: var(--maincolor);
+    font-size: 24px;
+    font-weight: bold;
+    width: 241px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 46px;
+    -webkit-border-radius: 46px;
+    -moz-border-radius: 46px;
+    -ms-border-radius: 46px;
+    -o-border-radius: 46px;
+    border: 0;
+    box-shadow: 0px 5px 11.4px 5px rgba(0,0,0,25%);
+}

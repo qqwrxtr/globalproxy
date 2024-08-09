@@ -9,7 +9,7 @@ const InfoBlock = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2, // Delay each child animation by 0.2s
+                staggerChildren: 0.2,
             },
         },
     };
