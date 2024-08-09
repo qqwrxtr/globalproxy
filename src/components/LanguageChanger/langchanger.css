@@ -64,6 +64,10 @@
     pointer-events: none;
     width: 20px;
     height: 20px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 
@@ -78,7 +82,6 @@
         width: 20px;
         height: 20px;
         margin-right: 8px;
-        top: 17px;
     }
 }
 
@@ -89,4 +92,16 @@
         height: 40px;
         margin-top: 0px;
     }
+}
+
+@media only screen and (max-width:350px) {
+    .lang-selector-wrapper::before{
+        content: "";
+        display: none;
+    }
+    .form-select{
+        padding-left: 10px !important;
+        width:76px;
+    }
+    
 }

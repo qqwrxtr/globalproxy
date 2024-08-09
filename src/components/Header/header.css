@@ -138,3 +138,18 @@ a{
         margin-right: 5px;
     }
 }
+
+@media only screen and (max-width:730px) {
+    .log_register{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:470px) {
+    .txt_logo{
+        display: none !important;
+    }
+    .navbar{
+        padding: 20px 10px 0;
+    }
+}
