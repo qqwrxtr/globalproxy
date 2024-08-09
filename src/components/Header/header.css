@@ -69,7 +69,6 @@ a{
     color: var(--hovermain);
 }
 
-
 .registere button{
     background-color: var(--maincolor);
     color: white;
@@ -86,6 +85,20 @@ a{
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
     border: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.registere:hover button{
+    background-color: var(--mainanother);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
 }
 
 .txt_register , .txt_register p {
@@ -113,6 +126,21 @@ a{
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.login:hover button{
+    background-color: var(--maincolor);
+    color: white;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
 }
 
 .log_register{
@@ -130,6 +158,7 @@ a{
     flex-grow: 1;
     column-gap: 30px;
 }
+
 
 @media only screen and (max-width:1450px) {
     .registere button{
