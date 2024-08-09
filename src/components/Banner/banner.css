@@ -76,12 +76,28 @@
     max-width: 1000px;
 }
 
+.sign_up_now_button{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.sign_up_now_button:hover{
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
 @media only screen and (max-width:1200px) {
     .title_banner h2{
         font-size: 57px;
     }
     .subtitle p{
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 
@@ -94,7 +110,7 @@
 
 @media only screen and (max-width:967px) {
     .title_banner h2{
-        font-size: 48px;
+        font-size: 48.5px;
     }
     .subtitle p{
         font-size: 16px;
@@ -114,12 +130,18 @@
         width: 200px;
         height: 55px;
     }
+}
 
+
+@media only screen and (max-width:730px) {
+    .column_content_banner{
+        padding: 65px 60px;
+    }
 }
 
 @media only screen and (max-width:630px) {
     .title_banner h2{
-        font-size: 44px;
+        font-size: 47.5px;
     }
     .subtitle p{
         font-size: 15px;
@@ -147,6 +169,11 @@
     }
 }
 
+@media only screen and (max-width:582px) {
+    .column_content_banner{
+        padding: 40px 30px;
+    }
+}
 
 @media only screen and (max-width:380px) {
     .title_banner h2{
