@@ -36,39 +36,6 @@ a{
     padding-left: 10px;
 }
 
-.nav-item a{
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--maincolor);
-}
-
-.nav-link {
-    position: relative;
-    color: var(--maincolor);
-    text-decoration: none;
-}
-
-.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--maincolor);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 100%;
-    background-color: var(--hovermain);
-}
-
-.nav-link:hover {
-    color: var(--hovermain);
-}
-
 .registere button{
     background-color: var(--maincolor);
     color: white;
@@ -94,11 +61,6 @@ a{
 
 .registere:hover button{
     background-color: var(--mainanother);
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
 }
 
 .txt_register , .txt_register p {
@@ -136,11 +98,6 @@ a{
 .login:hover button{
     background-color: var(--maincolor);
     color: white;
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
 }
 
 .log_register{
@@ -211,6 +168,12 @@ a{
         padding: 20px 10px 0;
     }
 }
+
+/* @media only screen and (max-width:425px) {  
+    .navbar-toggler{
+        display: none !important;
+    }
+} */
 
 @media only screen and (max-width:380px) {  
    .txt_logo{

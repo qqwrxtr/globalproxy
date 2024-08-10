@@ -1,15 +1,15 @@
 import OffersBlock from "../OffersBlock/OffersBlock";
 import "./offers.css"
 import denmark from "./../../assets/img/denmark.svg";
-import romania from "./../../assets/img/romania.svg"
-import moldova from "./../../assets/img/moldova.svg"
-import three from "./../../assets//img/3.svg";
-import telia from "./../../assets//img/Telia.svg";
-import lebara from "./../../assets//img/lebara.svg";
-import telero from "./../../assets//img/telero.svg";
-import orange from "./../../assets//img/orange.svg";
-import moldcell from "./../../assets//img/moldcell.svg";
-import unite from "./../../assets//img/unite.svg";
+import romania from "./../../assets/img/romania.svg";
+import moldova from "./../../assets/img/moldova.svg";
+import three from "./../../assets/img/3.svg";
+import telia from "./../../assets/img/Telia.svg";
+import lebara from "./../../assets/img/lebara.svg";
+import telero from "./../../assets/img/telero.svg";
+import orange from "./../../assets/img/orange.svg";
+import moldcell from "./../../assets/img/moldcell.svg";
+import unite from "./../../assets/img/unite.svg";
 
 const offersData = [
     {
@@ -63,9 +63,11 @@ const Offers = () => {
           </div>
             <div className="row d-flex justify-content-center align-items-center px-3">
                 {offersData.map((offer, index) => (
-                    <div className="offerblock col-4 d-flex flex-column align-items-center col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-12">
+                    <div
+                        key={index} // Move the key prop here
+                        className="offerblock col-4 d-flex flex-column align-items-center col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-12"
+                    >
                         <OffersBlock
-                            key={index}
                             title={offer.title}
                             flag={offer.flag}
                             subtitle={offer.subtitle}
