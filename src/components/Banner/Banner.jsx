@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './banner.css';
@@ -6,11 +6,6 @@ import main_bg from './../../assets/video/mianbg.gif';
 
 const Banner = () => {
     const { t } = useTranslation();
-    const [isLoaded, setIsLoaded] = useState(false);
-
-    const handleLoad = () => {
-        setIsLoaded(true);
-    };
 
     const textVariant = {
         hidden: { opacity: 0, y: 50 },
@@ -21,13 +16,7 @@ const Banner = () => {
         <div className="banner_container">
             <div className="row">
                 <div className="absolute_bg container-fluid">
-                    <img 
-                        src={main_bg} 
-                        alt="" 
-                        loading="lazy" 
-                        onLoad={handleLoad} 
-                        style={{ display: isLoaded ? 'block' : 'none' }} 
-                    />
+                    <img src={main_bg} alt="" />
                 </div>
             </div>
             <div className="row d-flex flex-column align-items-center text-center text_banner">
@@ -38,7 +27,7 @@ const Banner = () => {
                     <motion.div className="subtitle" initial="hidden" animate="visible" variants={textVariant}>
                         <p>{t("Banner_info")}</p>
                     </motion.div>
-                    <div className="sign_up_now_button d-flex justify-content-center">
+                    <div className="sign_up_now_button d-flex justify-content-center" initial="hidden" animate="visible" variants={textVariant}>
                         <a href="https://proxy-lab.com/register" target="_blank" className="button">
                             <div className="txt_sign_up_now">
                                 <p>{t("Sign Up Now")}</p>
