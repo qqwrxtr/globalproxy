@@ -65,6 +65,10 @@ a{
     color: var(--hovermain);
 }
 
+.button_register{
+    margin-right: 5px !important;
+}
+
 .button_register button{
     background-color: var(--maincolor);
     color: white;
@@ -94,11 +98,6 @@ a{
 
 .button_login p {
     margin: 0 !important;
-}
-
-.button_login{
-    height: 22px;
-    padding-left: 5px;
 }
 
 .button_register p{
@@ -150,7 +149,6 @@ a{
     column-gap: 30px;
 }
 
-
 @media only screen and (max-width:1450px) {
     .button_register button{
         width: 150px;
@@ -180,9 +178,6 @@ a{
         height: 40px;
         margin-top: 0;
     }
-    .button_register{
-        margin-right: 5px !important;
-    }
     .log_register{
         margin-right: 5px;
     }
@@ -191,21 +186,33 @@ a{
     }
 }
 
+@media only screen and (max-width:1199px) {
+    .menu{
+        padding-top: 20px;
+        padding-right: 20px;
+        align-items: end !important;
+    }
+}
+
 @media only screen and (max-width:730px) {
-    .log_register{
+    .button_register , .button_login{
         display: none !important;
     }
 }
 
-@media only screen and (max-width:470px) {  
+@media only screen and (max-width:470px) { 
+    .container_header{
+        margin: 0 !important;
+        padding: 0 !important;
+    } 
     .navbar{
-        padding: 20px 10px 0;
+        padding: 20px 0px 0;
     }
 }
 
-@media only screen and (max-width:380px) {  
+@media only screen and (max-width:400px) {  
    .txt_logo{
-    font-size: 16px !important;
+    font-size: 18px !important;
     padding-left: 5px !important;
    }
 }
