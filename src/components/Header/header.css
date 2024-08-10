@@ -36,6 +36,18 @@ a{
     padding-left: 10px;
 }
 
+.nav-item a{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--maincolor);
+    text-decoration: none;
+}
+
 .registere button{
     background-color: var(--maincolor);
     color: white;
