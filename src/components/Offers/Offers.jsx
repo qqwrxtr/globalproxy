@@ -68,9 +68,9 @@ const Offers = () => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
+                duration: 0.1,
                 when: "beforeChildren",
-                staggerChildren: 0.1,
+                staggerChildren: 0.2,
             },
         },
     };
@@ -80,7 +80,10 @@ const Offers = () => {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 0.5 },
+            transition: { 
+                duration: 0.7,
+                ease: "easeInOut",
+            },
         },
     };
 
