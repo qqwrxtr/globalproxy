@@ -63,7 +63,7 @@ const Header = () => {
                         <div className="collapse navbar-collapse order-xl-2" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-xl-0 menu">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#offers">
                                         {t("Offers")}
                                     </a>
                                 </li>

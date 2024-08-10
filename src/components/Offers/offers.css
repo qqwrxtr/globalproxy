@@ -1,0 +1,33 @@
+.offerblock{
+    height: 671px;
+}
+
+.text_title_offer{
+    font-size: 55px;
+    color: var(--maincolor);
+    font-weight: bold;
+}
+
+.container_offers{
+    margin-top: 50px;
+}
+
+@media only screen and (max-width:1400px) {
+   .offerblock{
+       height: 620px;
+    }
+    .text_title_offer{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .offerblock{
+       height: 570px;
+    }
+    .text_title_offer{
+    font-size: 40px;
+    }
+}
+
+ 

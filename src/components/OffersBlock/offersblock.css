@@ -5,8 +5,10 @@
 .offers_block{
     margin-bottom: 150px;
     background-color: var(--maincolor);
-    width: 465px;
-    height: 671px;
+    max-width: 465px;
+    width: 100%;
+    max-height: 671px;
+    height: 100%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -91,10 +93,6 @@
     margin-top: 5px;
 }
 
-.operators_img img{
-    width: auto;
-}
-
 .operators_title{
     font-size: 24px;
     font-weight: bold;
@@ -122,4 +120,112 @@
     -o-border-radius: 46px;
     border: 0;
     box-shadow: 0px 5px 11.4px 5px rgba(0,0,0,25%);
+}
+
+@media only screen and (max-width:1550px) {
+    .txt_title_blocks{
+        font-size: 20px;
+    }
+    .subtitle_offers{
+        font-size: 16px;
+    }
+    .offers_block{
+        width: 430px;
+        height: 620px;
+        row-gap: 20px;
+    }
+    .price{
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (max-width:1400px){
+    .offers_block{
+        row-gap: 0;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .txt_title_blocks{
+        font-size: 20px;
+    }
+    .subtitle_offers{
+        font-size: 14px;
+    }
+    .offers_block{
+        width: 400px;
+        height: 560px;
+        row-gap: 0px;
+    }
+    .price{
+        font-size: 30px;
+    }
+    .operators_img{
+        width: 230px;
+        min-width: fit-content;
+        gap: 14px;
+        height: 45px;
+    }
+    .buy_now button{
+        font-size: 20px;
+        width: 180px;
+        height: 55px;
+    }
+    .price_block{
+        row-gap: 25px;
+    }
+    .price2 img{
+        width: 320px;
+        transform: translate(-40px,-39px);
+    }
+    .operators_title{
+        font-size: 20px;
+    }
+    .time_price{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .txt_title_blocks{
+        font-size: 18px;
+    }
+    .subtitle_offers{
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .offers_block{
+        width: 350px;
+        height: 530px;
+        row-gap: 0px;
+    }
+    .price{
+        font-size: 28px;
+    }
+    .time_price{
+        font-size: 17px;
+    }
+    .operators_img{
+        width: 230px;
+        min-width: fit-content;
+        gap: 14px;
+        height: 45px;
+    }
+    .buy_now button{
+        font-size: 18px;
+        width: 150px;
+        height: 49px;
+    }
+    .price_block{
+        height: 200px;
+        row-gap: 15px;
+    }
+    .price2 img{
+        width: 255px;
+        transform: translate(-40px,-30px);
+    }
+    .operators_title{
+        font-size: 20px;
+    }
 }

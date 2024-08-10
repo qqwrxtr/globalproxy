@@ -11,8 +11,6 @@ import orange from "./../../assets//img/orange.svg";
 import moldcell from "./../../assets//img/moldcell.svg";
 import unite from "./../../assets//img/unite.svg";
 
-
-
 const offersData = [
     {
         title: "4G Romania",
@@ -57,10 +55,15 @@ const offersData = [
   ];
 const Offers = () => {
     return ( 
-        <div className="container">
-            <div className="row d-flex justify-content-center align-items-center gap-5">
+        <div className="container container_offers" id="offers">
+          <div className="row">
+            <div className="col-12 d-flex justify-content-center text_title_offer">
+              <p>What we offer</p>
+            </div>
+          </div>
+            <div className="row d-flex justify-content-center align-items-center px-3">
                 {offersData.map((offer, index) => (
-                    <div className="col-3">
+                    <div className="offerblock col-4 d-flex flex-column align-items-center col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-12">
                         <OffersBlock
                             key={index}
                             title={offer.title}
