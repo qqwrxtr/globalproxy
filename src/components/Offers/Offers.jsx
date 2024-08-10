@@ -10,12 +10,19 @@ import telero from "./../../assets/img/telero.svg";
 import orange from "./../../assets/img/orange.svg";
 import moldcell from "./../../assets/img/moldcell.svg";
 import unite from "./../../assets/img/unite.svg";
+import { useTranslation } from "react-i18next";
 
-const offersData = [
+
+
+const Offers = () => {
+
+  const {t} = useTranslation();
+
+  const offersData = [
     {
         title: "4G Romania",
         flag: romania,
-        subtitle: "Fast response times. Enjoy high-speed connections over 35+ Mbps.",
+        subtitle: `${t("Subtitle")}`,
         price1: "35",
         price2: "60",
         price3: "100",
@@ -27,7 +34,7 @@ const offersData = [
     {
       title: "4G Denmark",
       flag: denmark,
-      subtitle: "Fast response times. Enjoy high-speed connections over 35+ Mbps.",
+      subtitle: `${t("Subtitle")}`,
       price1: "50",
       price2: "80",
       price3: "140",
@@ -41,7 +48,7 @@ const offersData = [
     {
         title: "4G Moldova",
         flag: moldova,
-        subtitle: "Fast response times. Enjoy high-speed connections over 35+ Mbps.",
+        subtitle: `${t("Subtitle")}`,
         price1: "25",
         price2: "45",
         price3: "80",
@@ -53,18 +60,18 @@ const offersData = [
         imgheight:"36"
       },
   ];
-const Offers = () => {
+
     return ( 
         <div className="container container_offers" id="offers">
           <div className="row">
             <div className="col-12 d-flex justify-content-center text_title_offer">
-              <p>What we offer</p>
+              <p>{t("Offer")}</p>
             </div>
           </div>
             <div className="row d-flex justify-content-center align-items-center px-3">
                 {offersData.map((offer, index) => (
                     <div
-                        key={index} // Move the key prop here
+                        key={index}
                         className="offerblock col-4 d-flex flex-column align-items-center col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-12"
                     >
                         <OffersBlock

@@ -12,7 +12,7 @@
     margin-top: 50px;
 }
 
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width:1399px) {
    .offerblock{
        height: 620px;
     }
@@ -27,6 +27,12 @@
     }
     .text_title_offer{
     font-size: 40px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .offerblock{
+        height: 530px;
     }
 }
 

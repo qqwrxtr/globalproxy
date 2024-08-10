@@ -31,10 +31,6 @@
     -o-transform: translateX(12px);
     pointer-events: none;
     user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -moz-user-drag: none;
-    -ms-user-drag: none;
 }
 
 .title_banner h2{
@@ -81,67 +77,6 @@
     padding: 90px 50px;
     max-width: 1000px;
 }
-
-.sign_up_now_button{
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-.sign_up_now_button {
-    filter: url('#goo');
-}
-
-.button {
-    display: inline-block;
-    text-align: center;
-    background: var(--maincolor);
-    font-weight: bold;
-    padding: 1.18em 1.32em 1.03em;
-    line-height: 1;
-    border-radius: 1em;
-    position: relative;
-    min-width: 8.23em;
-    text-decoration: none;
-    font-family: var(--font);
-    font-size: 1.25rem;
-}
-
-.button:before,
-.button:after {
-    width: 4.4em;
-    height: 2.95em;
-    position: absolute;
-    content: "";
-    display: inline-block;
-    background: var(--maincolor);
-    border-radius: 50%;
-    transition: transform 0.4s ease;
-    transform: scale(0);
-    z-index: -1;
-    -webkit-transition: transform 0.4s ease;
-    -moz-transition: transform 0.4s ease;
-    -ms-transition: transform 0.4s ease;
-    -o-transition: transform 0.4s ease;
-}
-
-.button:before {
-    top: -25%;
-    left: 20%;
-}
-
-.button:after {
-    bottom: -25%;
-    right: 20%;
-}
-
-.button:hover:before,
-.button:hover:after {
-    transform: none;
-}
-
 @media only screen and (max-width:1200px) {
     .title_banner h2{
         font-size: 57px;

@@ -2,8 +2,12 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import './info.css';
+import { useTranslation } from 'react-i18next';
 
 const InfoBlock = () => {
+
+    const { t } = useTranslation();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -39,7 +43,7 @@ const InfoBlock = () => {
                                 <p><CountUp end={250} /> GB</p>
                             </div>
                             <div className="subtitle_info_abt text_big">
-                                <p>Data limit per port</p>
+                                <p>{t("Data_limit")}</p>
                             </div>
                             <div className="border-btm-sm"></div>
                         </motion.div>
@@ -51,7 +55,7 @@ const InfoBlock = () => {
                                 <p><CountUp end={100000} /> +</p>
                             </div>
                             <div className="subtitle_info_abt">
-                                <p>IP addresses</p>
+                                <p>{t("IP")}</p>
                             </div>
                             <div className="border-btm-sm"></div>
                         </motion.div>
@@ -63,7 +67,7 @@ const InfoBlock = () => {
                                 <p><CountUp end={3} /> +</p>
                             </div>
                             <div className="subtitle_info_abt">
-                                <p>Locations</p>
+                                <p>{t("Locations")}</p>
                             </div>
                             <div className="border-btm-sm"></div>
                         </motion.div>
@@ -75,7 +79,7 @@ const InfoBlock = () => {
                                 <p><CountUp end={35} decimals={0} />+ Mbps</p>
                             </div>
                             <div className="subtitle_info_abt">
-                                <p>Avg port speed</p>
+                                <p>{t("Port_Speed")}</p>
                             </div>
                             <div className="border-btm-sm"></div>
                         </motion.div>
@@ -84,10 +88,10 @@ const InfoBlock = () => {
 
                         <motion.div className="last-row-item col-xxl-2 col-xl-2 col-lg-12 col-sm-12" variants={itemVariants}>
                             <div className="title_info_abt">
-                                <p><CountUp end={2} />+ Operators</p>
+                                <p><CountUp end={2} />+ {t("Operators")}</p>
                             </div>
                             <div className="subtitle_info_abt">
-                                <p>Per country</p>
+                                <p>{t("Country")}</p>
                             </div>
                         </motion.div>
                     </div>

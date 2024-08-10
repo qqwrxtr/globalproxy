@@ -4,10 +4,6 @@ a{
 
 .container_header{
     transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
 }
 
 .navbar{
@@ -48,7 +44,28 @@ a{
     text-decoration: none;
 }
 
-.registere button{
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--maincolor);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    background-color: var(--hovermain);
+}
+
+.nav-link:hover {
+    color: var(--hovermain);
+}
+
+.button_register button{
     background-color: var(--maincolor);
     color: white;
     display: flex;
@@ -71,21 +88,26 @@ a{
     -o-transition: all 0.3s ease-in-out;
 }
 
-.registere:hover button{
+.button_register:hover button{
     background-color: var(--mainanother);
 }
 
-.txt_register , .txt_register p {
-    height: 22px;
-    padding-left: 5px;
+.button_login p {
     margin: 0 !important;
 }
 
-.txt_login,.txt_login p{
+.button_login{
     height: 22px;
+    padding-left: 5px;
 }
 
-.login button{
+.button_register p{
+    height: 22px;
+    margin: 0 !important;
+    padding-left: 5px;
+}
+
+.button_login button{
     width: 80px;
     height: 40px;
     background-color: white;
@@ -107,7 +129,7 @@ a{
     -o-transition: all 0.3s ease-in-out;
 }
 
-.login:hover button{
+.button_login:hover button{
     background-color: var(--maincolor);
     color: white;
 }
@@ -130,7 +152,7 @@ a{
 
 
 @media only screen and (max-width:1450px) {
-    .registere button{
+    .button_register button{
         width: 150px;
     }
     .nav-link{
@@ -145,27 +167,27 @@ a{
     .nav-link{
         font-size: 16px !important;
     }
-    .registere button,.login button{
+    .button_register button,.button_login button{
         font-size: 14px;
-        height: 35px;
+        height: 30px;
         margin-top: 5px;
     }
     .menu{
-        column-gap: 13px;
+        column-gap: 8px;
     }
-}
-
-@media only screen and (max-width:1350px) {
-    .registere button,.login button{
+    .button_register button,.button_login button{
         font-size: 16px;
         height: 40px;
         margin-top: 0;
     }
-    .registere{
+    .button_register{
         margin-right: 5px !important;
     }
     .log_register{
         margin-right: 5px;
+    }
+    .navbar{
+        padding: 20px 10px 0;
     }
 }
 
@@ -180,12 +202,6 @@ a{
         padding: 20px 10px 0;
     }
 }
-
-/* @media only screen and (max-width:425px) {  
-    .navbar-toggler{
-        display: none !important;
-    }
-} */
 
 @media only screen and (max-width:380px) {  
    .txt_logo{

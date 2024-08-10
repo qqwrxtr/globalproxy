@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./offersblock.css";
 import top from "./../../assets/img/top.svg";
+import { useTranslation } from "react-i18next";
 
 const OffersBlock = (props) => {
+
+    const {t} = useTranslation();
+
     const [adjustedImgHeight, setAdjustedImgHeight] = useState(props.imgheight);
 
     useEffect(() => {
@@ -30,7 +34,7 @@ const OffersBlock = (props) => {
             <div className="block1 d-flex align-items-center justify-content-center flex-column">
                 <div className="title_title d-flex align-items-center justify-content-center">
                     <div className="txt_title_blocks">
-                        <p>Mobile Proxy {props.title}</p>
+                        <p>{t("Mobile")} Proxy {props.title}</p>
                     </div>
                     <div className="img_title_blocks">
                         <img src={props.flag} alt="" />
@@ -46,7 +50,7 @@ const OffersBlock = (props) => {
                         <p className="position-relative">
                             <span className="dollar">$</span>
                             <span className="price">{props.price1}</span>
-                            <span className="time_price">/ 2 weeks package</span>
+                            <span className="time_price">/ 2 {t("week")}</span>
                         </p>
                     </div>
                     <div className="price2">
@@ -54,14 +58,14 @@ const OffersBlock = (props) => {
                         <p className="position-relative">
                             <span className="dollar">$</span>
                             <span className="price">{props.price2}</span>
-                            <span className="time_price">/ 1 month package</span>
+                            <span className="time_price">/ 1 {t("month")}</span>
                         </p>
                     </div>
                     <div className="price3">
                         <p className="position-relative">
                             <span className="dollar">$</span>
                             <span className="price">{props.price3}</span>
-                            <span className="time_price">/ 2 months package</span>
+                            <span className="time_price">/ 2 {t("month")}</span>
                         </p>
                     </div>
                 </div>
@@ -69,7 +73,7 @@ const OffersBlock = (props) => {
             <div className="block3 d-flex align-items-center justify-content-center flex-column">
                 <div className="operators">
                     <div className="operators_title">
-                        <p>Operators</p>
+                        <p>{t("Operators")}</p>
                     </div>
                     <div className="operators_img">
                         {Object.values(props.operators).map((img, index) => (
@@ -84,7 +88,7 @@ const OffersBlock = (props) => {
                 </div>
                 <div className="buy_now">
                     <button>
-                        <p>BUY NOW!</p> 
+                        <p>{t("BuyNow")}</p> 
                     </button>
                 </div>
             </div>

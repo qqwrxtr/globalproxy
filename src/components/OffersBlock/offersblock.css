@@ -56,12 +56,12 @@
 }
 
 .price2 img{
-    transform: translate(-50px,-38px);
-    -webkit-transform: translate(-50px,-38px);
-    -moz-transform: translate(-50px,-38px);
-    -ms-transform: translate(-50px,-38px);
-    -o-transform: translate(-50px,-38px);
-    width: 365px;
+    transform: translate(-50px,-38px) rotate(2deg);
+    -webkit-transform: translate(-50px,-38px) rotate(2deg);
+    -moz-transform: translate(-50px,-38px) rotate(2deg);
+    -ms-transform: translate(-50px,-38px) rotate(2deg);
+    -o-transform: translate(-50px,-38px) rotate(2deg);
+    width: 380px;
 }
 
 .time_price{
@@ -137,12 +137,19 @@
     .price{
         font-size: 40px;
     }
-
+    .price2 img{
+        width: 370px;
+        transform: translate(-50px,-38px);
+        -webkit-transform: translate(-50px,-38px);
+        -moz-transform: translate(-50px,-38px);
+        -ms-transform: translate(-50px,-38px);
+        -o-transform: translate(-50px,-38px);
+    }
 }
 
-@media only screen and (max-width:1400px){
+@media only screen and (max-width:1399px){
     .offers_block{
-        row-gap: 0;
+        row-gap: 10px;
     }
 }
 
@@ -176,7 +183,7 @@
         row-gap: 25px;
     }
     .price2 img{
-        width: 320px;
+        width: 300px;
         transform: translate(-40px,-39px);
     }
     .operators_title{
@@ -222,7 +229,7 @@
         row-gap: 15px;
     }
     .price2 img{
-        width: 255px;
+        width: 270px;
         transform: translate(-40px,-30px);
     }
     .operators_title{
