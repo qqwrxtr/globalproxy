@@ -70,7 +70,7 @@ const Offers = () => {
             transition: {
                 duration: 0.5,
                 when: "beforeChildren",
-                staggerChildren: 0.3,
+                staggerChildren: 0.1,
             },
         },
     };
@@ -80,7 +80,7 @@ const Offers = () => {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 0.3 },
+            transition: { duration: 0.5 },
         },
     };
 
