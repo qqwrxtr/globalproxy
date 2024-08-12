@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './banner.css';
-import main_bg from './../../assets/video/mianbg.gif';
+import main_bglg from './../../assets/video/mainbg_992.gif';
+import main_bgmd from './../../assets/video/mainbg_768.gif';
+import main_bgsm from './../../assets/video/mainbg_425.gif';
 
 const Banner = () => {
     const { t } = useTranslation();
@@ -16,7 +18,9 @@ const Banner = () => {
         <div className="banner_container">
             <div className="row">
                 <div className="absolute_bg container-fluid">
-                    <img src={main_bg} alt="" />
+                    <img src={main_bglg} alt="" className='d-lg-block d-none d-md-none d-sm-none'/>
+                    <img src={main_bgmd} alt="" className='d-md-block d-lg-none d-sm-none d-none'/>
+                    <img src={main_bgsm} alt="" className='d-sm-block d-md-none'/>
                 </div>
             </div>
             <div className="row d-flex flex-column align-items-center text-center text_banner">
