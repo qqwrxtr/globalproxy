@@ -81,7 +81,7 @@ const Dashboard = () => {
                             </motion.div>
                         ))}
                         <motion.div className="button_get_start_dashboard" variants={itemVariants}>
-                            <a href='https://proxy-lab.com/register' target="_blank" ref="noreferrer">
+                            <a href='https://proxy-lab.com/register' target="_blank">
                                 <button>{t("GetStart")}</button>
                             </a>
                         </motion.div>
