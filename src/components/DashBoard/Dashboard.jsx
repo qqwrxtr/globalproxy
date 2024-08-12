@@ -64,7 +64,7 @@ const Dashboard = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className="row row_content_dashboard flex-wrap-reverse d-flex flex-row-reverse ">
+            <div className="row row_content_dashboard flex-wrap-reverse d-flex flex-row-reverse align-items-center">
                 <div className="col-xl-6 col-12 d-flex flex-column align-items-center">
                     <motion.div className="dashimg" variants={imageVariants}>
                         <img src={dashboard} alt="" className="img-fluid" loading="lazy" />
@@ -80,6 +80,11 @@ const Dashboard = () => {
                                 <Subpoints text={offer.text} />
                             </motion.div>
                         ))}
+                        <motion.div className="button_get_start_dashboard" variants={itemVariants}>
+                            <a href='https://proxy-lab.com/register' target="_blank">
+                                <button>{t("GetStart")}</button>
+                            </a>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>

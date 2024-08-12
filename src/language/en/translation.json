@@ -42,5 +42,6 @@
     "TextDash2" : "All configuration changes are applied in real-time",
     "TextDash3" : "Change proxy type between HTTP and SOCKS",
     "TextDash4" : "Update proxy authentication",
-    "TextDash5" : "Keep track of your data usage live"
+    "TextDash5" : "Keep track of your data usage live",
+    "GetStart" : "Get Started"
 }

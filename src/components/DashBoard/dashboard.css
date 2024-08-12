@@ -21,16 +21,42 @@ p{
 .text_dashboard{
     max-width: 730px;
     width: 100%;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
 }
 
 .title_dashboard{
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .dashimg img{
     border: 1px solid var(--maincolor);
     border-radius: 10px;
+}
+
+.button_get_start_dashboard{
+    margin-top: 20px;
+}
+
+.button_get_start_dashboard button{
+    width: 200px;
+    height: 60px;
+    background-color: var(--maincolor);
+    color: white;
+    border: 0;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @media only screen and (max-width:1200px) {
@@ -54,6 +80,11 @@ p{
     .row_content_dashboard{
         margin: 0 !important;
     }
+    .button_get_start_dashboard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -76,6 +107,11 @@ p{
     .title_dashboard{
         font-size: 20px;
     }
+    .button_get_start_dashboard button{
+        font-size: 18px;
+        width: 170px;
+        height: 55px;
+    }
 }
 
 @media only screen and (max-width:440px) {
@@ -93,6 +129,11 @@ p{
     }
     .title_dashboard{
         font-size: 16px;
+    }
+    .button_get_start_dashboard button{
+        font-size: 14px;
+        width: 130px;
+        height: 45px;
     }
 }
 
