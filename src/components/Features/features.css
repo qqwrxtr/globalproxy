@@ -1,0 +1,38 @@
+.container_features{
+    margin-top: 100px;
+}
+
+
+.title_main_features{
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.row_features{
+    row-gap: 55px;
+}
+
+@media only screen and (max-width:1500px) {
+    .title_main_features{
+    font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .title_main_features{
+    font-size: 40px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .title_main_features{
+        font-size: 35px;
+        }
+}
+
+@media only screen and (max-width:390px) {
+    .title_main_features{
+        font-size: 24px;
+        }
+}

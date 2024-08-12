@@ -22,5 +22,18 @@
     "week" : "weeks package",
     "month" : "month package",
     "2month" : "months package",
-    "BuyNow" : "BUY NOW !"
+    "BuyNow" : "BUY NOW !",
+    "3Trial" : "3-hour Free Trial",
+    "Our Features" : "Our Features",
+    "3TrialSub" : "Enjoy a 3-hour free trial with no payment required to test our mobile proxy service.",
+    "High_Speed" : "High Speed",
+    "High_Speed_Sub" : "Experience blazing-fast speeds of 35+ Mbps, ensuring smooth and efficient proxy connections.",
+    "Data" : "High Data Limits",
+    "Data_Sub" : "Enjoy generous data limits for uninterrupted browsing and downloading.",
+    "Network" : "Strong Network Stability",
+    "Network_Sub" : "Rely on our robust network stability to maintain consistent and reliable connections at all times.",
+    "IP2" : "Large Pool of IP's",
+    "IP_Sub" : "Access multiple IPs from different locations for enhanced anonymity and bypassing restrictions.",
+    "Tech" : "Technical Support",
+    "Tech_Sub" : "Get top-notch support from our dedicated team to resolve any issues."
 }
