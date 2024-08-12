@@ -27,7 +27,7 @@ const FeatureItem = ({ feature, index }) => {
     return (
         <motion.div
             ref={ref}
-            className="featureblock col-4 d-flex flex-column align-items-center col-xxl-4 col-lg-6 col-md-12 col-12"
+            className="featureblock col-4 d-flex flex-column align-items-center col-xxl-4 col-md-6 col-12"
             initial={featureAnimation.initial}
             animate={isInView ? featureAnimation.animate : featureAnimation.initial}
             transition={featureAnimation.transition(index)}
