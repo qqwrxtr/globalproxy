@@ -12,7 +12,7 @@ const containerVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: {
+        transition: { 
             delay: 0.1,
             duration: 0.6,
             when: "beforeChildren",
@@ -81,7 +81,7 @@ const Dashboard = () => {
                             </motion.div>
                         ))}
                         <motion.div className="button_get_start_dashboard" variants={itemVariants}>
-                            <a href='https://proxy-lab.com/register' target="_blank">
+                            <a href='https://proxy-lab.com/register' target="_blank" ref="noreferrer">
                                 <button>{t("GetStart")}</button>
                             </a>
                         </motion.div>
