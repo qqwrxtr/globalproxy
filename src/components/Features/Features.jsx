@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
-import FeaturesBlock from "../FeaturesBlock.jsx/FeaturesBlock";
+import FeaturesBlock from "../FeaturesBlock/FeaturesBlock";
 import "./features.css";
 
 import stopwatch from "./../../assets/img/stopwatch.svg";
@@ -12,12 +12,21 @@ import ip from "./../../assets/img/ip.svg";
 import tech from "./../../assets/img/tech.svg";
 
 const featureAnimation = {
-    initial: { opacity: 0, y: 0 },
+    initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: (index) => ({
         duration: 0.5,
         delay: index * 0.1
     })
+};
+
+const titleAnimation = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    transition: {
+        duration: 0.5,
+        delay: 0.2
+    }
 };
 
 const FeatureItem = ({ feature, index }) => {
@@ -79,11 +88,16 @@ const Features = () => {
 
     return (
         <div className="container container_features d-flex flex-column align-items-center justify-content-center" id="features">
-            <div className="row">
+            <motion.div
+                className="row"
+                initial={titleAnimation.initial}
+                animate={titleAnimation.animate}
+                transition={titleAnimation.transition}
+            >
                 <div className="col-12 title_main_features">
                     <p>{t("Our Features")}</p>
                 </div>
-            </div>
+            </motion.div>
             <div className="row row_features">
                 {features.map((feature, index) => (
                     <FeatureItem

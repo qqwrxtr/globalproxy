@@ -87,6 +87,21 @@ const Offers = () => {
         },
     };
 
+    const titleVariants = {
+        hidden: { opacity: 0, y: -50, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.8,
+                type: "spring",
+                damping: 10,
+                stiffness: 100,
+            },
+        },
+    };
+
     return (
         <div className="container container_offers" id="offers" ref={ref}>
             <motion.div
@@ -95,9 +110,14 @@ const Offers = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <div className="col-12 d-flex justify-content-center text_title_offer">
+                <motion.div
+                    className="col-12 d-flex justify-content-center text_title_offer"
+                    variants={titleVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
                     <p>{t("Offer")}</p>
-                </div>
+                </motion.div>
             </motion.div>
             <motion.div
                 className="row d-flex justify-content-center align-items-center px-3"
@@ -126,6 +146,6 @@ const Offers = () => {
             </motion.div>
         </div>
     );
-}
+};
 
 export default Offers;

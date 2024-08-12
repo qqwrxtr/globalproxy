@@ -35,5 +35,12 @@
     "IP2" : "Large Pool of IP's",
     "IP_Sub" : "Access multiple IPs from different locations for enhanced anonymity and bypassing restrictions.",
     "Tech" : "Technical Support",
-    "Tech_Sub" : "Get top-notch support from our dedicated team to resolve any issues."
+    "Tech_Sub" : "Get top-notch support from our dedicated team to resolve any issues.",
+    "Dashboard2" : "Friendly Dashboard",
+    "TitleDash" : "Manage your proxies 24/7 using our dashboard",
+    "TextDash1" : "Order and view all of your proxies in one place",
+    "TextDash2" : "All configuration changes are applied in real-time",
+    "TextDash3" : "Change proxy type between HTTP and SOCKS",
+    "TextDash4" : "Update proxy authentication",
+    "TextDash5" : "Keep track of your data usage live"
 }

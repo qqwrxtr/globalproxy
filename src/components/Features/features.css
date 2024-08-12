@@ -1,6 +1,5 @@
 .container_features{
     margin-top: 100px;
-    
 }
 .title_main_features{
     font-size: 55px;
@@ -11,6 +10,7 @@
 .row_features{
     margin: 0 10px;
     row-gap: 55px;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width:1500px) {

@@ -1,5 +1,6 @@
 import './App.css';
 import Banner from './components/Banner/Banner';
+import Dashboard from './components/DashBoard/Dashboard';
 import Features from './components/Features/Features';
 import Header from './components/Header/Header';
 import InfoBlock from './components/InfoAbt/Infoabt';
@@ -16,6 +17,7 @@ function App() {
         <InfoBlock/>
         <Offers/>
         <Features/>
+        <Dashboard/>
       </main>
     </div>
   );
