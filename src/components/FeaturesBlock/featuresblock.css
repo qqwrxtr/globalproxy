@@ -17,7 +17,7 @@
 
 .content_features{
     display: flex;
-    padding: 15px 15px;
+    padding: 19px;
     align-items: start;
 }
 
@@ -34,7 +34,7 @@
 .subtitle_features{
     font-size: 18px;
     font-weight: normal;
-    margin-top: -5px;
+    margin-top: 5px;
     max-width: 321px;
     width: 100%;
 }

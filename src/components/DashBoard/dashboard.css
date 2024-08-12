@@ -15,18 +15,22 @@ p{
 }
 
 .row_content_dashboard{
-    margin: 40px 70px;
+    margin: 40px 50px;
 }
 
 .text_dashboard{
     max-width: 730px;
     width: 100%;
-    margin-left: 50px;
 }
 
 .title_dashboard{
     font-size: 36px;
     font-weight: 700;
+}
+
+.dashimg img{
+    border: 1px solid var(--maincolor);
+    border-radius: 10px;
 }
 
 @media only screen and (max-width:1200px) {

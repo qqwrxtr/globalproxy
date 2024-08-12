@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './banner.css';
@@ -6,30 +6,30 @@ import main_bglg from './../../assets/video/mainbg_992.gif';
 import main_bgmd from './../../assets/video/mainbg_768.gif';
 import main_bgsm from './../../assets/video/mainbg_425.gif';
 
-const Banner = () => {
+const textVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const buttonVariants = {
+    initial: {
+        scale: 1,
+        boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.2)',
+        transition: { duration: 0.3 },
+    },
+    hover: {
+        scale: 1.04,
+        boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.3)',
+        transition: { duration: 0.3 },
+    },
+    tap: {
+        scale: 0.9,
+        boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.3)',
+    },
+};
+
+const Banner = memo(() => {
     const { t } = useTranslation();
-
-    const textVariant = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-    };
-
-    const buttonVariants = {
-        initial: {
-            scale: 1,
-            boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.2)',
-            transition: { duration: 0.3 },
-        },
-        hover: {
-            scale: 1.1,
-            boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.3)',
-            transition: { duration: 0.3 },
-        },
-        tap: {
-            scale: 0.9,
-            boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.3)',
-        },
-    };
 
     return (
         <div className="banner_container">
@@ -72,6 +72,6 @@ const Banner = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Banner;

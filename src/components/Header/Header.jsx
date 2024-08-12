@@ -1,43 +1,45 @@
-import proxylogo from "./../../assets/img/SvgjsSvg1003.png";
 import React from "react";
-import LangChanger from "./../LanguageChanger/LangChanger.jsx";
+import proxylogo from "./../../assets/img/SvgjsSvg1003.png";
 import registericon from "./../../assets/img/portrait.svg";
-import "./header.css";
+import LangChanger from "./../LanguageChanger/LangChanger.jsx";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import "./header.css";
 
-const Header = () => {
+const containerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.1,
+            when: "beforeChildren",
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
+
+const navItemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.7,
+            delay: index * 0.2,
+        },
+    }),
+};
+
+const Header = React.memo(() => {
     const { t } = useTranslation();
 
-    const containerVariants = {
-        hidden: { opacity: 0, y: -20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.1,
-                when: "beforeChildren",
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: -10 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    };
-
-    const navItemVariants = {
-        hidden: { opacity: 0, y: -10 },
-        visible: (index) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.7,
-                delay: index * 0.2,
-            },
-        }),
-    };
+    const menuItems = ["Offers", "Features", "Dashboard", "Support"];
 
     return (
         <div className="container container_header">
@@ -95,7 +97,7 @@ const Header = () => {
 
                     <motion.div className="collapse navbar-collapse order-xl-2" id="navbarSupportedContent">
                         <motion.ul className="navbar-nav me-auto mb-2 mb-xl-0 menu">
-                            {["Offers", "Features", "Dashboard", "Support"].map((item, index) => (
+                            {menuItems.map((item, index) => (
                                 <motion.li
                                     className="nav-item"
                                     key={item}
@@ -115,6 +117,6 @@ const Header = () => {
             </motion.nav>
         </div>
     );
-};
+});
 
 export default Header;

@@ -4,28 +4,27 @@ import { motion } from 'framer-motion';
 import './info.css';
 import { useTranslation } from 'react-i18next';
 
-const InfoBlock = () => {
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 },
+    },
+};
+
+const InfoBlock = React.memo(() => {
     const { t } = useTranslation();
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5 },
-        },
-    };
 
     return (
         <div className="container_info w-100 d-flex align-items-center justify-content-center" style={{ marginTop: "49px", padding: "0 20px" }}>
@@ -99,6 +98,6 @@ const InfoBlock = () => {
             </motion.div>
         </div>
     );
-};
+});
 
 export default InfoBlock;

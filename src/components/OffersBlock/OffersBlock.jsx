@@ -1,78 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import "./offersblock.css";
 import top from "./../../assets/img/top.svg";
 import { useTranslation } from "react-i18next";
 
-const OffersBlock = (props) => {
+const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3, operators }) => {
+    const { t } = useTranslation();
+    const [adjustedImgHeight, setAdjustedImgHeight] = useState(imgheight);
 
-    const {t} = useTranslation();
+    const updateImgHeight = useCallback(() => {
+        const initialHeight = parseInt(imgheight, 10);
+        let newHeight = initialHeight;
 
-    const [adjustedImgHeight, setAdjustedImgHeight] = useState(props.imgheight);
+        if (window.innerWidth < 351) newHeight -= 18;
+        else if (window.innerWidth < 391) newHeight -= 15;
+        else if (window.innerWidth < 531) newHeight -= 10;
+
+        setAdjustedImgHeight(`${newHeight}px`);
+    }, [imgheight]);
 
     useEffect(() => {
-        const updateImgHeight = () => {
-            const initialHeight = parseInt(props.imgheight, 10);
-    
-            if(window.innerWidth < 351){
-                setAdjustedImgHeight(`${initialHeight - 18}px`);
-            } else if (window.innerWidth < 391) {
-                setAdjustedImgHeight(`${initialHeight - 15}px`);
-            } else if (window.innerWidth < 531) {
-                setAdjustedImgHeight(`${initialHeight - 10}px`);
-            } else {
-                setAdjustedImgHeight(`${initialHeight}px`);
-            }
-        };
-    
         updateImgHeight();
-    
-        window.addEventListener('resize', updateImgHeight);
-    
-        return () => {
-            window.removeEventListener('resize', updateImgHeight);
-        };
-    }, [props.imgheight]);
-    
+        window.addEventListener("resize", updateImgHeight);
+
+        return () => window.removeEventListener("resize", updateImgHeight);
+    }, [updateImgHeight]);
 
     return (
         <div className="offers_block">
             <div className="block1 d-flex align-items-center justify-content-center flex-column">
                 <div className="title_title d-flex align-items-center justify-content-center">
                     <div className="txt_title_blocks">
-                        <p>{t("Mobile")} Proxy {props.title}</p>
+                        <p>{t("Mobile")} Proxy {title}</p>
                     </div>
                     <div className="img_title_blocks">
-                        <img src={props.flag} alt="" />
+                        <img src={flag} alt="" />
                     </div>
                 </div>
                 <div className="subtitle_offers">
-                    <p>{props.subtitle}</p>
+                    <p>{subtitle}</p>
                 </div>
             </div>
             <div className="block2">
                 <div className="price_block d-flex flex-column align-items-center justify-content-center">
-                    <div className="price1">
-                        <p className="position-relative">
-                            <span className="dollar">$</span>
-                            <span className="price">{props.price1}</span>
-                            <span className="time_price">/ 2 {t("week")}</span>
-                        </p>
-                    </div>
-                    <div className="price2">
-                        <img src={top} alt="" className="position-absolute"/>
-                        <p className="position-relative">
-                            <span className="dollar">$</span>
-                            <span className="price">{props.price2}</span>
-                            <span className="time_price">/ 1 {t("month")}</span>
-                        </p>
-                    </div>
-                    <div className="price3">
-                        <p className="position-relative">
-                            <span className="dollar">$</span>
-                            <span className="price">{props.price3}</span>
-                            <span className="time_price">/ 2 {t("month")}</span>
-                        </p>
-                    </div>
+                    {[price1, price2, price3].map((price, index) => (
+                        <div key={index} className={`price${index + 1}`}>
+                            {index === 1 && <img src={top} alt="" className="position-absolute" />}
+                            <p className="position-relative">
+                                <span className="dollar">$</span>
+                                <span className="price">{price}</span>
+                                <span className="time_price">/ {index === 0 ? `2 ${t("week")}` : index === 1 ? `1 ${t("month")}` : `2 ${t("month")}`}</span>
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="block3 d-flex align-items-center justify-content-center flex-column">
@@ -81,7 +60,7 @@ const OffersBlock = (props) => {
                         <p>{t("Operators")}</p>
                     </div>
                     <div className="operators_img">
-                        {Object.values(props.operators).map((img, index) => (
+                        {Object.values(operators).map((img, index) => (
                             <img
                                 src={img}
                                 alt=""
@@ -93,12 +72,12 @@ const OffersBlock = (props) => {
                 </div>
                 <div className="buy_now">
                     <button>
-                        <p>{t("BuyNow")}</p> 
+                        <p>{t("BuyNow")}</p>
                     </button>
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default OffersBlock;
+export default React.memo(OffersBlock);

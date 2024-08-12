@@ -1,3 +1,4 @@
+import React, { useRef, useMemo } from "react";
 import OffersBlock from "../OffersBlock/OffersBlock";
 import "./offers.css";
 import denmark from "./../../assets/img/denmark.svg";
@@ -12,67 +13,53 @@ import moldcell from "./../../assets/img/moldcell.svg";
 import unite from "./../../assets/img/unite.svg";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
-
 
 const Offers = () => {
     const { t } = useTranslation();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
-    const offersData = [
+    const offersData = useMemo(() => [
         {
             title: "4G Romania",
             flag: romania,
-            subtitle: `${t("Subtitle")}`,
+            subtitle: t("Subtitle"),
             price1: "35",
             price2: "60",
             price3: "100",
-            operators: {
-                operator1: telero,
-            },
+            operators: { operator1: telero },
             imgheight: "40",
         },
         {
             title: "4G Denmark",
             flag: denmark,
-            subtitle: `${t("Subtitle")}`,
+            subtitle: t("Subtitle"),
             price1: "50",
             price2: "80",
             price3: "140",
-            operators: {
-                operator1: three,
-                operator2: telia,
-                operator3: lebara,
-            },
+            operators: { operator1: three, operator2: telia, operator3: lebara },
             imgheight: "40",
         },
         {
             title: "4G Moldova",
             flag: moldova,
-            subtitle: `${t("Subtitle")}`,
+            subtitle: t("Subtitle"),
             price1: "25",
             price2: "45",
             price3: "80",
-            operators: {
-                operator1: orange,
-                operator2: moldcell,
-                operator3: unite,
-            },
+            operators: { operator1: orange, operator2: moldcell, operator3: unite },
             imgheight: "36",
         },
-    ];
+    ], [t]);
 
     const containerVariants = {
-        hidden: { opacity: 0, y: 0 },
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            y: 0,
             transition: {
-                duration: 0.1,
                 when: "beforeChildren",
                 staggerChildren: 0.2,
+                duration: 0.2,
             },
         },
     };
@@ -82,47 +69,30 @@ const Offers = () => {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { 
-                duration: 0.7,
-                ease: "easeInOut",
-            },
-        },
-    };
-
-    const titleVariants = {
-        hidden: { opacity: 0, y: -50, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.8,
-                type: "spring",
-                damping: 10,
-                stiffness: 100,
-            },
+            transition: { duration: 0.5, ease: "easeInOut" },
         },
     };
 
     return (
         <div className="container container_offers" id="offers" ref={ref}>
-           <motion.div
+            <motion.div
                 className="row"
-                initial={titleAnimationVariants.initial}
-                animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
-                transition={titleAnimationVariants.transition}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                variants={containerVariants}
             >
                 <motion.div
                     className="col-12 d-flex justify-content-center text_title_offer"
+                    variants={itemVariants}
                 >
                     <p>{t("Offer")}</p>
                 </motion.div>
             </motion.div>
             <motion.div
                 className="row d-flex justify-content-center align-items-center px-3"
-                variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
+                variants={containerVariants}
             >
                 {offersData.map((offer, index) => (
                     <motion.div
@@ -147,4 +117,4 @@ const Offers = () => {
     );
 };
 
-export default Offers;
+export default React.memo(Offers);

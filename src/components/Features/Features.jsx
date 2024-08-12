@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import FeaturesBlock from "../FeaturesBlock/FeaturesBlock";
@@ -16,20 +16,11 @@ const featureAnimation = {
     animate: { opacity: 1, y: 0 },
     transition: (index) => ({
         duration: 0.5,
-        delay: index * 0.1
-    })
+        delay: index * 0.1,
+    }),
 };
 
-const titleAnimation = {
-    initial: { opacity: 0, y: -20 },
-    animate: { opacity: 1, y: 0 },
-    transition: {
-        duration: 0.5,
-        delay: 0.2
-    }
-};
-
-const FeatureItem = ({ feature, index }) => {
+const FeatureItem = React.memo(({ feature, index }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -41,50 +32,46 @@ const FeatureItem = ({ feature, index }) => {
             animate={isInView ? featureAnimation.animate : featureAnimation.initial}
             transition={featureAnimation.transition(index)}
         >
-            <FeaturesBlock
-                img={feature.img}
-                title={feature.title}
-                subtitle={feature.subtitle}
-            />
+            <FeaturesBlock img={feature.img} title={feature.title} subtitle={feature.subtitle} />
         </motion.div>
     );
-};
+});
 
 const Features = () => {
     const { t } = useTranslation();
 
-    const features = [
+    const features = useMemo(() => [
         {
-            img: `${stopwatch}`,
+            img: stopwatch,
             title: t("3Trial"),
             subtitle: t("3TrialSub"),
         },
         {
-            img: `${speedometr}`,
+            img: speedometr,
             title: t("High_Speed"),
             subtitle: t("High_Speed_Sub"),
         },
         {
-            img: `${data}`,
+            img: data,
             title: t("Data"),
             subtitle: t("Data_Sub"),
         },
         {
-            img: `${router}`,
+            img: router,
             title: t("Network"),
             subtitle: t("Network_Sub"),
         },
         {
-            img: `${ip}`,
+            img: ip,
             title: t("IP2"),
             subtitle: t("IP_Sub"),
         },
         {
-            img: `${tech}`,
+            img: tech,
             title: t("Tech"),
             subtitle: t("Tech_Sub"),
         }
-    ];
+    ], [t]);
 
     return (
         <div className="container container_features d-flex flex-column align-items-center justify-content-center" id="features">
@@ -100,15 +87,11 @@ const Features = () => {
             </motion.div>
             <div className="row row_features">
                 {features.map((feature, index) => (
-                    <FeatureItem
-                        key={index}
-                        feature={feature}
-                        index={index}
-                    />
+                    <FeatureItem key={index} feature={feature} index={index} />
                 ))}
             </div>
         </div>
     );
 };
 
-export default Features;
+export default React.memo(Features);
