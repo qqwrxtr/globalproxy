@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import FeaturesBlock from "../FeaturesBlock/FeaturesBlock";
 import "./features.css";
-
+import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
 import stopwatch from "./../../assets/img/stopwatch.svg";
 import speedometr from "./../../assets/img/speedometer.svg";
 import data from "./../../assets/img/data.svg";
@@ -90,9 +90,9 @@ const Features = () => {
         <div className="container container_features d-flex flex-column align-items-center justify-content-center" id="features">
             <motion.div
                 className="row"
-                initial={titleAnimation.initial}
-                animate={titleAnimation.animate}
-                transition={titleAnimation.transition}
+                initial={titleAnimationVariants.initial}
+                animate={titleAnimationVariants.animate}
+                transition={titleAnimationVariants.transition}
             >
                 <div className="col-12 title_main_features">
                     <p>{t("Our Features")}</p>

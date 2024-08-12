@@ -13,6 +13,8 @@ import unite from "./../../assets/img/unite.svg";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
+
 
 const Offers = () => {
     const { t } = useTranslation();
@@ -104,17 +106,14 @@ const Offers = () => {
 
     return (
         <div className="container container_offers" id="offers" ref={ref}>
-            <motion.div
+           <motion.div
                 className="row"
-                variants={containerVariants}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
+                initial={titleAnimationVariants.initial}
+                animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
+                transition={titleAnimationVariants.transition}
             >
                 <motion.div
                     className="col-12 d-flex justify-content-center text_title_offer"
-                    variants={titleVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
                 >
                     <p>{t("Offer")}</p>
                 </motion.div>

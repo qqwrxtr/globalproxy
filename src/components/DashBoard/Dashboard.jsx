@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import "./dashboard.css";
-
+import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
 import dashboard from "./../../assets/img/dashboard.svg";
 import Subpoints from "../Subpoints/Subpoints";
 
@@ -49,14 +49,14 @@ const Dashboard = () => {
             className="container container_dashboard"
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            variants={containerVariants}
         >
             <div className="row">
                 <div className="col-12 d-flex justify-content-center align-items-center">
                     <motion.div 
                         className="dashboard_title text-center"
-                        initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1, transition: { delay: 0.4, duration: 0.8 } } : { opacity: 0 }}
+                        initial={titleAnimationVariants.initial}
+                        animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
+                        transition={titleAnimationVariants.transition}
                     >
                         <p>{t("Dashboard2")}</p>
                     </motion.div>
