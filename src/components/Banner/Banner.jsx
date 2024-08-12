@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './banner.css';
@@ -6,24 +6,8 @@ import main_bglg from './../../assets/video/mainbg_992.gif';
 import main_bgmd from './../../assets/video/mainbg_768.gif';
 import main_bgsm from './../../assets/video/mainbg_425.gif';
 
-const Banner = ({ onImagesLoaded }) => {
+const Banner = () => {
     const { t } = useTranslation();
-
-    useEffect(() => {
-        const images = [main_bglg, main_bgmd, main_bgsm];
-        let loadedCount = 0;
-
-        images.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => {
-                loadedCount += 1;
-                if (loadedCount === images.length) {
-                    onImagesLoaded();
-                }
-            };
-        });
-    }, [onImagesLoaded]);
 
     const textVariant = {
         hidden: { opacity: 0, y: 50 },
