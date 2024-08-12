@@ -34,6 +34,33 @@
     .offerblock{
         height: 530px;
     }
+    .text_title_offer{
+        font-size: 35px;
+    }
 }
 
+@media only screen and (max-width:390px) {
+    .offerblock{
+        height: 490px;
+    }
+    .text_title_offer{
+        font-size: 24px;
+    }
+}
  
+
+@media only screen and (max-width:350px) {
+    .offerblock{
+        height: 460px;
+    }
+
+}
+
+@media only screen and (max-width:310px) {
+    .offerblock{
+        height: 410px;
+    }
+    .text_title_offer{
+        font-size: 20px;
+    }
+}

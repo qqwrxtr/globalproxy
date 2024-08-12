@@ -12,22 +12,27 @@ const OffersBlock = (props) => {
     useEffect(() => {
         const updateImgHeight = () => {
             const initialHeight = parseInt(props.imgheight, 10);
-
-            if (window.innerWidth < 531) {
+    
+            if(window.innerWidth < 351){
+                setAdjustedImgHeight(`${initialHeight - 18}px`);
+            } else if (window.innerWidth < 391) {
+                setAdjustedImgHeight(`${initialHeight - 15}px`);
+            } else if (window.innerWidth < 531) {
                 setAdjustedImgHeight(`${initialHeight - 10}px`);
             } else {
                 setAdjustedImgHeight(`${initialHeight}px`);
             }
         };
-
+    
         updateImgHeight();
-
+    
         window.addEventListener('resize', updateImgHeight);
-
+    
         return () => {
             window.removeEventListener('resize', updateImgHeight);
         };
     }, [props.imgheight]);
+    
 
     return (
         <div className="offers_block">
