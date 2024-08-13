@@ -58,7 +58,7 @@ p {
     flex-direction: column;
     row-gap: 15px;
 }
-
+/* 
 .card_footer_img {
     max-width: 480px;
     width: 100%;
@@ -68,7 +68,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 @media only screen and (max-width: 1170px) {
     .container_tech {

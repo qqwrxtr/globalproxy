@@ -23,20 +23,20 @@ const TechSupport = () => {
         visible: {
             opacity: 1,
             transition: {
-                duration: 0.5,
+                duration: 0.3,
                 when: "beforeChildren",
-                staggerChildren: 0.3,
+                staggerChildren: 0.1,
             },
         },
     };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
     };
 
     return (
-        <div
+        <motion.div
             ref={ref}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -46,48 +46,48 @@ const TechSupport = () => {
         >
             <div className="row w-100">
                 <div className="col-12 tech_title d-flex justify-content-center align-items-center">
-                    <div
+                    <motion.div
                         initial={titleAnimationVariants.initial}
                         animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
                         transition={titleAnimationVariants.transition}
                     >
                         <p>{t("Tech_Support")}</p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-            <div
+            <motion.div
                 className="row d-flex justify-content-center for_wrap_tech"
                 variants={containerVariants}
             >
                 <div className="col-md-4 col-12 col_gap_tech">
-                    <div className="text_part_tech" variants={itemVariants}>
+                    <motion.div className="text_part_tech" variants={itemVariants}>
                         <div className="title_tech">
                             <p>{t("TitleTech")}</p>
                         </div>
                         <div className="subtitle_tech">
                             <p>{t("SubtitleTech")}</p>
                         </div>
-                    </div>
-                    <div className="subpoints_container" variants={containerVariants}>
+                    </motion.div>
+                    <motion.div className="subpoints_container" variants={containerVariants}>
                         {subpoints.map((points, index) => (
-                            <div className="subpoints" key={index} variants={itemVariants}>
+                            <motion.div className="subpoints" key={index} variants={itemVariants}>
                                 <Subpoints text={points.text} variant="tech" />
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
-                    <div className="contact_us_button_tech" variants={itemVariants}>
+                    </motion.div>
+                    <motion.div className="contact_us_button_tech" variants={itemVariants}>
                         <a href="">
                             <button>{t("Contact_Us")}</button>
                         </a>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="col-md-4 col-12 img_tech d-flex align-items-center justify-content-lg-end justify-content-center" variants={itemVariants}>
+                <motion.div className="col-md-4 col-12 img_tech d-flex align-items-center justify-content-lg-end justify-content-center" variants={itemVariants}>
                     <div className="card_footer_img">
                         <img src={globus} alt="Globus" className="img-fluid" />
                     </div>
-                </div>
-            </div>
-        </div>
+                </motion.div>
+            </motion.div>
+        </motion.div>
     );
 };
 
