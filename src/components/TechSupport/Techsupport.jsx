@@ -32,7 +32,7 @@ const TechSupport = () => {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 0 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
