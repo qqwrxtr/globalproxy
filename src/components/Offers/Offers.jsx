@@ -17,7 +17,7 @@ import { motion, useInView } from "framer-motion";
 const Offers = () => {
     const { t } = useTranslation();
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, threshold: 0.2 });
+    const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
     const offersData = useMemo(() => [
         {
@@ -59,7 +59,7 @@ const Offers = () => {
             transition: {
                 when: "beforeChildren",
                 staggerChildren: 0.2,
-                duration: 0.2,
+                duration: 0.3,
                 ease: "easeOut",
             },
         },
@@ -75,7 +75,7 @@ const Offers = () => {
     };
 
     return (
-        <div className="container container_offers" id="offers" ref={ref}>
+        <div className="container container_offers margin_for_container" id="offers" ref={ref}>
             <motion.div
                 className="row"
                 initial="hidden"

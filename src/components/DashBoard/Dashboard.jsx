@@ -1,92 +1,130 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, useInView } from "framer-motion";
-import { useRef, useMemo } from "react";
 import s from "./dashboard.module.css";
-import { titleAnimationVariants } from "../../Utils/TitleAnimation/TitleAnimation.jsx";
 import dashboard from "./../../assets/img/dashboard.png";
 import Subpoints from "../Subpoints/Subpoints";
-
-const containerVariants = {
-    hidden: { opacity: 0, y: 0 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { 
-            delay: 0.1,
-            duration: 0.6,
-            when: "beforeChildren",
-            staggerChildren: 0.15,
-        },
-    },
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-};
-
-const imageVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 0.3 } },
-};
+import { titleAnimationVariants } from "./../../Utils/TitleAnimation/TitleAnimation.jsx";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Dashboard = () => {
     const { t } = useTranslation();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, threshold: 0.2 });
 
-    const subpoints = useMemo(() => [
+    const titleControls = useAnimation();
+    const subpointsControls = useAnimation();
+    const buttonControls = useAnimation();
+    const imgControls = useAnimation();
+
+    const subpoints = [
         { text: t("TextDash1") },
         { text: t("TextDash2") },
         { text: t("TextDash3") },
         { text: t("TextDash4") },
         { text: t("TextDash5") },
-    ], [t]);
+    ];
+
+    React.useEffect(() => {
+        if (isInView) {
+            titleControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } })
+                .then(() => {
+                    return subpointsControls.start((index) => ({
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.5, delay: index * 0.2 },
+                    }));
+                })
+                .then(() => {
+                    return buttonControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                })
+                .then(() => {
+                    return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                });
+        }
+    }, [isInView]);
 
     return (
-        <motion.div 
+        <motion.div
             ref={ref}
-            className={`container ${s.container_dashboard}`}
+            id="dashboard"
+            className={`container ${s.container_dashboard} margin_for_container`}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            id="dashboard"
+            variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { duration: 0.5 } },
+            }}
         >
-            <div className="row">
+            <motion.div
+                className="row"
+                initial={titleAnimationVariants.initial}
+                animate={isInView ? titleAnimationVariants.animate : ""}
+                transition={{ ...titleAnimationVariants.transition, delay: 0 }}
+            >
                 <div className="col-12 d-flex justify-content-center align-items-center">
-                    <motion.div 
-                        className={s.dashboard_title + " text-center"}
-                        initial={titleAnimationVariants.initial}
-                        animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
-                        transition={titleAnimationVariants.transition}
-                    >
+                    <div className={`${s.dashboard_title} text-center`}>
                         <p>{t("Dashboard2")}</p>
-                    </motion.div>
+                    </div>
                 </div>
-            </div>
-            <div className={`row ${s.row_content_dashboard} flex-wrap-reverse d-flex flex-row-reverse align-items-center ${s.content_row}`}>
-                <div className="col-xl-6 col-12 d-flex flex-column align-items-center">
-                    <motion.div className={s.dashimg} variants={imageVariants}>
-                        <img src={dashboard} alt="" className="img-fluid" loading="lazy" />
-                    </motion.div>
-                </div>
-                <div className="col-xl-6 col-12 d-flex flex-column align-items-center">
-                    <motion.div className={s.text_dashboard} variants={containerVariants}>
-                        <div className={s.title_dashboard}>
+            </motion.div>
+            <div
+                className={`row ${s.row_content_dashboard} flex-wrap-reverse d-flex flex-row align-items-center ${s.content_row}`}
+            >
+                <motion.div
+                    className="col-xl-6 col-12 d-flex flex-column align-items-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={titleControls}
+                >
+                    <div className={s.text_dashboard}>
+                        <motion.div
+                            className={s.title_dashboard}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={titleControls}
+                        >
                             <p>{t("TitleDash")}</p>
-                        </div>
+                        </motion.div>
                         {subpoints.map((offer, index) => (
-                            <motion.div className={s.subpoints} key={index} variants={itemVariants}>
-                                <Subpoints text={offer.text} variant="dashboard"/>
+                            <motion.div
+                                className={s.subpoints}
+                                key={index}
+                                custom={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={subpointsControls}
+                            >
+                                <Subpoints text={offer.text} variant="dashboard" />
                             </motion.div>
                         ))}
-                        <motion.div className={s.button_get_start_dashboard} variants={itemVariants}>
-                            <a href='https://app.proxy-lab.com/register' target="_blank">
+                        <motion.div
+                            className={s.button_get_start_dashboard}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={buttonControls}
+                        >
+                            <a
+                                href="https://app.proxy-lab.com/register"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <button>{t("GetStart")}</button>
                             </a>
                         </motion.div>
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    className="col-xl-6 col-12 d-flex flex-column align-items-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={imgControls}
+                >
+                    <div className={s.dashimg}>
+                        <motion.img
+                            src={dashboard}
+                            alt="Dashboard"
+                            className="img-fluid"
+                            loading="lazy"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={imgControls}
+                        />
+                    </div>
+                </motion.div>
             </div>
         </motion.div>
     );

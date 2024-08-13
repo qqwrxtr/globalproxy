@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useCallback, Suspense, lazy } from "react";
 import proxylogo from "./../../assets/img/SvgjsSvg1003.png";
 import registericon from "./../../assets/img/portrait.svg";
-import LangChanger from "./../LanguageChanger/LangChanger.jsx";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import "./header.css";
-import BtnDarkMode from "../BtnDarkMode/BtnDarkMode.jsx";
+
+const LangChanger = lazy(() => import("./../LanguageChanger/LangChanger.jsx"));
+const BtnDarkMode = lazy(() => import("../BtnDarkMode/BtnDarkMode.jsx"));
 
 const containerVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -40,7 +41,24 @@ const navItemVariants = {
 const Header = React.memo(() => {
     const { t, i18n } = useTranslation();
 
-    const menuItems = ["Offers", "Features", "Dashboard", "Support"];
+    const menuItems = ["Offers", "Features", "Dashboard", "Support"] || [];
+
+    const renderMenuItems = useCallback(() => (
+        (menuItems || []).map((item, index) => (
+            <motion.li
+                className={`nav-item ${index === 0 && i18n.language === 'ru' ? 'd-none' : ''}`}
+                key={item}
+                variants={navItemVariants}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+            >
+                <a className="nav-link" href={`#${item.toLowerCase()}`}>
+                    {t(item)}
+                </a>
+            </motion.li>
+        ))
+    ), [menuItems, i18n.language, t]);
 
     return (
         <div className="container container_header">
@@ -57,11 +75,12 @@ const Header = React.memo(() => {
                     </motion.div>
 
                     <motion.div className="d-flex align-items-center ms-auto order-xl-3" variants={itemVariants}>
-                        <div className="dark_white mx-3">
-                            <BtnDarkMode/>
-                        </div>
-                        
-                        <LangChanger />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <div className="dark_white mx-3">
+                                <BtnDarkMode />
+                            </div>
+                            <LangChanger />
+                        </Suspense>
 
                         <motion.a
                             href="https://app.proxy-lab.com/register"
@@ -95,7 +114,6 @@ const Header = React.memo(() => {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                             variants={itemVariants}
-                        
                         >
                             <span className="navbar-toggler-icon"></span>
                         </motion.button>
@@ -103,20 +121,7 @@ const Header = React.memo(() => {
 
                     <motion.div className="collapse navbar-collapse order-xl-2 d-xl-block d-none" id="navbarSupportedContent">
                         <motion.ul className="navbar-nav me-auto mb-2 mb-xl-0 menu">
-                            {menuItems.map((item, index) => (
-                                <motion.li
-                                    className={`nav-item ${index === 0 && i18n.language === 'ru' ? 'd-none' : ''}`}
-                                    key={item}
-                                    variants={navItemVariants}
-                                    custom={index}
-                                    initial="hidden"
-                                    animate="visible"
-                                >
-                                    <a className="nav-link" href={`#${item.toLowerCase()}`}>
-                                        {t(item)}
-                                    </a>
-                                </motion.li>
-                            ))}
+                            {renderMenuItems()}
                         </motion.ul>
                     </motion.div>
                 </div>

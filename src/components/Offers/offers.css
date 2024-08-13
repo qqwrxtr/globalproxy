@@ -9,10 +9,6 @@
     font-weight: bold;
 }
 
-.container_offers{
-    margin-top: 20px;
-}
-
 
 @media only screen and (max-width:1399px) {
    .offerblock{

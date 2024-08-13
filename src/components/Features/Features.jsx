@@ -17,6 +17,7 @@ const featureAnimation = {
     transition: (index) => ({
         duration: 0.5,
         delay: index * 0.1,
+        ease: "easeInOut",
     }),
 };
 
@@ -74,7 +75,7 @@ const Features = () => {
     ], [t]);
 
     return (
-        <div className="container container_features d-flex flex-column align-items-center justify-content-center" id="features">
+        <div className="container container_features d-flex flex-column align-items-center justify-content-center margin_for_container" id="features" style={{overflow:"visible"}}>
             <motion.div
                 className="row"
                 initial={titleAnimationVariants.initial}

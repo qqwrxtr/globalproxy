@@ -9,7 +9,6 @@ p {
 
 .container_tech {
     color: var(--maincolor);
-    padding-top: 100px;
 }
 
 .tech_title {
@@ -22,11 +21,13 @@ p {
     font-weight: 500;
     max-width: 465px;
     width: 100%;
+    will-change: opacity, transform;
 }
 
 .subtitle_tech {
     font-size: 24px;
     padding-top: 10px;
+    will-change: opacity, transform;
 }
 
 .contact_us_button_tech button,
@@ -71,8 +72,8 @@ p {
     align-items: center;
 }
 
-.card_footer_img img{
-    
+.img_tech img {
+    will-change: opacity, transform;
 }
 
 @media only screen and (max-width: 1199px) {

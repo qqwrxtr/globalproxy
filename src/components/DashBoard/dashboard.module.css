@@ -7,10 +7,6 @@ p{
     color: var(--maincolor);
 }
 
-.content_row{
-    padding-top: 30px !important;
-}
-
 .dashboard_title{
     font-size: 50px;
     font-weight: bold;

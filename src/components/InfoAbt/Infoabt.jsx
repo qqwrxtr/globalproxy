@@ -15,7 +15,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
         opacity: 1,
         y: 0,
@@ -27,7 +27,7 @@ const InfoBlock = React.memo(() => {
     const { t } = useTranslation();
 
     return (
-        <div className="container container_info w-100 d-flex align-items-center justify-content-center" style={{padding: "50px 20px 0" }}>
+        <div className="container container_info w-100 d-flex align-items-center justify-content-center" style={{ padding: "50px 20px 0" }}>
             <motion.div
                 className="row w-100 d-flex justify-content-center"
                 variants={containerVariants}
@@ -36,7 +36,7 @@ const InfoBlock = React.memo(() => {
             >
                 <div className="col-12 bg_color pt-4">
                     <div className="row d-flex justify-content-center w-100 flex-xxl-nowrap flex-xl-nowrap flex-lg-wrap row_blocks">
-                        
+
                         <motion.div className="info_block col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-12" variants={itemVariants}>
                             <div className="title_info_abt">
                                 <p><CountUp end={250} /> GB</p>
@@ -75,7 +75,7 @@ const InfoBlock = React.memo(() => {
 
                         <motion.div className="info_block col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-12" variants={itemVariants}>
                             <div className="title_info_abt">
-                                <p><CountUp end={35} decimals={0} />+ Mbps</p>
+                                <p><CountUp end={35} decimals={0} /> + Mbps</p>
                             </div>
                             <div className="subtitle_info_abt">
                                 <p>{t("Port_Speed")}</p>
@@ -84,16 +84,15 @@ const InfoBlock = React.memo(() => {
                         </motion.div>
 
                         <div className="vr d-xl-block d-xxl-block d-none"></div>
-
-                        <motion.div className="last-row-item col-xxl-2 col-xl-2 col-lg-12 col-sm-12" variants={itemVariants}>
-                            <div className="title_info_abt">
-                                <p><CountUp end={2} />+ {t("Operators")}</p>
-                            </div>
-                            <div className="subtitle_info_abt">
-                                <p>{t("Country")}</p>
-                            </div>
-                        </motion.div>
-                    </div>
+                            <motion.div className="last-row-item col-xxl-2 col-xl-2 col-lg-12 col-sm-12" variants={itemVariants}>
+                                <div className="title_info_abt">
+                                    <p><CountUp end={2} /> + {t("Operators")}</p>
+                                </div>
+                                <div className="subtitle_info_abt">
+                                    <p>{t("Country")}</p>
+                                </div>
+                            </motion.div>
+                        </div>
                 </div>
             </motion.div>
         </div>
