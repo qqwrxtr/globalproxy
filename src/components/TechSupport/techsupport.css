@@ -33,7 +33,7 @@ p{
     padding-top: 10px;
 }
 
-.contact_us_button_tech button{
+.contact_us_button_tech button,.contact_us_button_tech a{
     max-width: 220px;
     width: 100%;
     height: 50px;

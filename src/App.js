@@ -2,6 +2,7 @@ import './App.css';
 import Banner from './components/Banner/Banner';
 import Dashboard from './components/DashBoard/Dashboard';
 import Features from './components/Features/Features';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import InfoBlock from './components/InfoAbt/Infoabt';
 import Offers from './components/Offers/Offers';
@@ -21,6 +22,9 @@ function App() {
         <Dashboard/>
         <TechSupport/>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
