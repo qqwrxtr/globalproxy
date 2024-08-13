@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { useLocalStorage } from './../../Utils/UseLocalStorage/useLocalStorage.jsx';
-import detectDarkMode from '../../Utils/DetectDarkMode/detectDarkMode.jsx';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 
 import sun from './../../assets/img/sun.svg';
 import moon from './../../assets/img/moon.svg';
 import './btndarkmode.css';
 
 const BtnDarkMode = () => {
-    const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectDarkMode());
+    const [darkMode, setDarkMode] = useLocalStorage('darkMode', 'light');
 
     useEffect(() => {
         if (darkMode === 'dark') {
