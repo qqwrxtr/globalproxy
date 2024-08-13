@@ -22,9 +22,7 @@ function App() {
         <Dashboard/>
         <TechSupport/>
       </main>
-      <footer>
-        <Footer/>
-      </footer>
+      
     </div>
   );
 }
