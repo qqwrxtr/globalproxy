@@ -12,7 +12,7 @@ const containerVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: {
+        transition: { 
             delay: 0.1,
             duration: 0.6,
             when: "beforeChildren",
