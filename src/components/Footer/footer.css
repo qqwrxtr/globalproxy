@@ -3,6 +3,10 @@
     padding: 0 !important;
 }
 
+.row_content_footer a {
+    color: white;
+}
+
 .container_footer{
     margin-top: 100px;
     margin-bottom: 40px;

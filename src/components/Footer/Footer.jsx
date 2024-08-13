@@ -37,9 +37,11 @@ const Footer = () => {
             <div className="row d-flex align-items-center justify-content-center row_content_footer">
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_one_footer_text" variants={itemVariants}>
-                        <div className="title_footer_part_one title_footer">
-                            <p>proxy-lab.com</p>
-                        </div>
+                        <a href="https://app.proxy-lab.com/proxies">
+                            <div className="title_footer_part_one title_footer">
+                                <p>proxy-lab.com</p>
+                            </div>
+                        </a>
                         <div className="subtitle_footer_part_one subtitle_footer">
                             <p>{t("SubtitleFooterPartOne")}</p>
                         </div>
@@ -47,9 +49,11 @@ const Footer = () => {
                 </div>
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_two_footer_text" variants={itemVariants}>
-                        <div className="title_footer_part_two title_footer">
-                            <p>@ProxyLab</p>
-                        </div>
+                        <a href="">
+                            <div className="title_footer_part_two title_footer">
+                                <p>@ProxyLab</p>
+                            </div>
+                        </a>
                         <div className="subtitle_footer_part_two subtitle_footer">
                             <p>{t("SubtitleFooterPartTwo")}</p>
                         </div>

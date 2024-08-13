@@ -55,7 +55,7 @@ const Banner = memo(() => {
                         variants={textVariant}
                     >
                         <motion.a
-                            href="https://proxy-lab.com/register"
+                            href="https://app.proxy-lab.com/register"
                             target="_blank"
                             className="button"
                             variants={buttonVariants}

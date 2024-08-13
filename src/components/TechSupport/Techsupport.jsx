@@ -83,7 +83,9 @@ const TechSupport = () => {
                     </motion.div>
                 </div>
                 <motion.div className="col-md-4 col-12 img_tech d-flex align-items-center justify-content-lg-end justify-content-center" variants={itemVariants}>
-                    <img src={globus} alt="" className="img-fluid" />
+                    <div className="card">
+                        
+                    </div>
                 </motion.div>
             </motion.div>
         </motion.div>

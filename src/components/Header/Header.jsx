@@ -64,7 +64,7 @@ const Header = React.memo(() => {
                         <LangChanger />
 
                         <motion.a
-                            href="https://proxy-lab.com/register"
+                            href="https://app.proxy-lab.com/register"
                             target="_blank"
                             className="button_register"
                             variants={itemVariants}
@@ -76,7 +76,7 @@ const Header = React.memo(() => {
                         </motion.a>
 
                         <motion.a
-                            href="https://proxy-lab.com/login"
+                            href="https://app.proxy-lab.com/login"
                             target="_blank"
                             className="button_login"
                             variants={itemVariants}

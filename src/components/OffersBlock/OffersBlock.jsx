@@ -71,9 +71,11 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
                     </div>
                 </div>
                 <div className="buy_now">
-                    <button>
-                        <p>{t("BuyNow")}</p>
-                    </button>
+                    <a href="https://app.proxy-lab.com/purchase">
+                        <button>
+                            <p>{t("BuyNow")}</p>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

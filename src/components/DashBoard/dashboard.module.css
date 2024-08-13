@@ -133,9 +133,11 @@ p{
 }
 
 @media only screen and (max-width:395px) {
-    .subpoint_block{
-        justify-content: center !important;
-        text-align: center;
+    .subpoints{
+        display: flex;
+        justify-content: start !important;
+        align-items: center;
+        text-align: start;
     }
 }
 
