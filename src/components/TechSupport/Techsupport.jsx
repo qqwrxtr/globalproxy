@@ -19,20 +19,19 @@ const TechSupport = () => {
     ];
 
     const containerVariants = {
-        hidden: { opacity: 0, y: 0 },
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            y: 0,
             transition: {
-                duration: 0.2,
+                duration: 0.5,
                 when: "beforeChildren",
-                staggerChildren: 0.2,
+                staggerChildren: 0.3,
             },
         },
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 0 },
+        hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
@@ -83,8 +82,8 @@ const TechSupport = () => {
                     </motion.div>
                 </div>
                 <motion.div className="col-md-4 col-12 img_tech d-flex align-items-center justify-content-lg-end justify-content-center" variants={itemVariants}>
-                    <div className="card">
-                        
+                    <div className="card_footer_img">
+                        <img src={globus} alt="Globus" className="img-fluid" />
                     </div>
                 </motion.div>
             </motion.div>
