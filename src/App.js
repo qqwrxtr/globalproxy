@@ -20,9 +20,11 @@ function App() {
         <Offers/>
         <Features/>
         <Dashboard/>
-        <TechSupport/>
+       
       </main>
-      
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
