@@ -1,0 +1,31 @@
+.dark-mode-btn {
+    background-color: #fff;
+    border: 2px solid var(--maincolor);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark-mode-btn--active {
+    background-color: #121212;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-btn__icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+.dark-mode-btn__icon_dark {
+    filter: invert(0%);
+}
+
+.dark-mode-btn img{
+    width: 16px;
+    height: 16px;
+}

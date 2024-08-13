@@ -5,6 +5,7 @@ import LangChanger from "./../LanguageChanger/LangChanger.jsx";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import "./header.css";
+import BtnDarkMode from "../BtnDarkMode/BtnDarkMode.jsx";
 
 const containerVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -37,7 +38,7 @@ const navItemVariants = {
 };
 
 const Header = React.memo(() => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const menuItems = ["Offers", "Features", "Dashboard", "Support"];
 
@@ -56,6 +57,10 @@ const Header = React.memo(() => {
                     </motion.div>
 
                     <motion.div className="d-flex align-items-center ms-auto order-xl-3" variants={itemVariants}>
+                        <div className="dark_white mx-3">
+                            <BtnDarkMode/>
+                        </div>
+                        
                         <LangChanger />
 
                         <motion.a
@@ -66,7 +71,7 @@ const Header = React.memo(() => {
                         >
                             <motion.button className="buton register">
                                 <img src={registericon} alt="Register Icon" />
-                                <p>{t("Sign Up")}</p>
+                                <p className="px-1">{t("Sign Up")}</p>
                             </motion.button>
                         </motion.a>
 
@@ -82,7 +87,7 @@ const Header = React.memo(() => {
                         </motion.a>
 
                         <motion.button
-                            className="navbar-toggler"
+                            className="navbar-toggler d-none"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent"
@@ -90,16 +95,17 @@ const Header = React.memo(() => {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                             variants={itemVariants}
+                        
                         >
                             <span className="navbar-toggler-icon"></span>
                         </motion.button>
                     </motion.div>
 
-                    <motion.div className="collapse navbar-collapse order-xl-2" id="navbarSupportedContent">
+                    <motion.div className="collapse navbar-collapse order-xl-2 d-xl-block d-none" id="navbarSupportedContent">
                         <motion.ul className="navbar-nav me-auto mb-2 mb-xl-0 menu">
                             {menuItems.map((item, index) => (
                                 <motion.li
-                                    className="nav-item"
+                                    className={`nav-item ${index === 0 && i18n.language === 'ru' ? 'd-none' : ''}`}
                                     key={item}
                                     variants={navItemVariants}
                                     custom={index}

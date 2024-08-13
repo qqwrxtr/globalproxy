@@ -12,11 +12,14 @@
     margin-right: 8px;
 }
 
+.dark .form-select{
+    background-color: #121212;
+}
+
 .form-select {
     border: 2px solid var(--maincolor);
     border-radius: 8px;
     padding: 5px 40px 5px 10px;
-    background-color: white;
     color: #7C3AED;
     width: 103px;
     height: 40px;
@@ -31,7 +34,11 @@
     cursor: pointer;
     background-position: end;
     padding-left: 33px !important;
-
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .form-select option {
@@ -94,7 +101,7 @@
     }
 }
 
-@media only screen and (max-width:350px) {
+@media only screen and (max-width:360px) {
     .lang-selector-wrapper::before{
         content: "";
         display: none;

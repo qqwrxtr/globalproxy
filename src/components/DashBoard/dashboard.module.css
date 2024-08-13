@@ -3,26 +3,30 @@ p{
 }
 
 .container_dashboard{
-    margin-top: 100px;
+    padding-top: 50px;
     color: var(--maincolor);
 }
 
+.content_row{
+    padding-top: 30px !important;
+}
+
 .dashboard_title{
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bold;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 .row_content_dashboard{
-    margin: 40px 50px;
+    padding: 20px 50px;
 }
 
 .text_dashboard{
     max-width: 730px;
     width: 100%;
     display: flex;
-    row-gap: 10px;
+    row-gap: 15px;
     flex-direction: column;
 }
 
@@ -41,7 +45,7 @@ p{
     margin-top: 20px;
 }
 
-.button_get_start_dashboard button{
+.button_get_start_dashboard a, .button_get_start_dashboard button{
     width: 200px;
     height: 60px;
     background-color: var(--maincolor);
@@ -59,7 +63,7 @@ p{
     font-weight: bold;
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1199px) {
     .text_dashboard{
         margin: 30px 0 !important;
         max-width: 100% !important;
@@ -85,12 +89,17 @@ p{
         justify-content: center;
         align-items: center;
     }
+    .content_row{
+        padding-top: 0px !important;
+    }
 }
-
 
 @media only screen and (max-width:660px) {
     .title_dashboard{
         font-size: 28px;
+    }
+    .row_content_dashboard{
+        padding: 0;
     }
 }
 
@@ -123,6 +132,13 @@ p{
     }
 }
 
+@media only screen and (max-width:395px) {
+    .subpoint_block{
+        justify-content: center !important;
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width:390px) {
     .dashboard_title{
         font-size: 24px;
@@ -130,15 +146,9 @@ p{
     .title_dashboard{
         font-size: 16px;
     }
-    .button_get_start_dashboard button{
+    .button_get_start_dashboard button , .button_get_start_dashboard a {
         font-size: 14px;
-        width: 130px;
-        height: 45px;
-    }
-}
-
-@media only screen and (max-width:392px) {
-    .subpoints{
-        justify-content: start !important;
+        width: 140px;
+        height: 50px;
     }
 }

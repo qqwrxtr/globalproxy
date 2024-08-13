@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import FeaturesBlock from "../FeaturesBlock/FeaturesBlock";
 import "./features.css";
-import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
+import { titleAnimationVariants } from "./../../Utils/TitleAnimation/TitleAnimation.jsx";
 import stopwatch from "./../../assets/img/stopwatch.svg";
 import speedometr from "./../../assets/img/speedometer.svg";
 import data from "./../../assets/img/data.svg";

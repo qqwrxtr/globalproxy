@@ -1,0 +1,77 @@
+.subpoint_block_dashboard{
+    display: flex;
+    column-gap: 10px;
+}
+
+.subpoint_block_tech{
+    display: flex;
+    column-gap: 10px;
+}
+
+.img_subpoint_dashboard img , .img_subpoint_tech img{
+    width: 25px;
+    height: 25px;
+}
+
+.subpoint_text_dashboard {
+    max-width: 460px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.subpoint_text_tech{
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.asterisk_dash , .asterisk_tech{
+    display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+    .subpoint_block_dashboard {
+        justify-content: center;
+    }
+    .subpoint_text_dashboard {
+        font-size: 18px;
+    }
+    .img_subpoint_dashboard img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .subpoint_text_dashboard {
+        font-size: 16px;
+        padding-top: 1px;
+    }
+    .img_subpoint_dashboard img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .subpoint_text_dashboard {
+        font-size: 14px;
+    }
+    .img_subpoint_dashboard img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    .subpoint_block_dashboard {
+        justify-content: start !important;
+        text-align: center;
+    }
+    .img_subpoint_dashboard img {
+        display: none;
+    }
+    .asterisk_dash{
+        display: inline-block;
+    }
+}

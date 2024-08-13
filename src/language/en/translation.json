@@ -43,5 +43,12 @@
     "TextDash3" : "Change proxy type between HTTP and SOCKS",
     "TextDash4" : "Update proxy authentication",
     "TextDash5" : "Keep track of your data usage live",
-    "GetStart" : "Get Started"
+    "GetStart" : "Get Started",
+    "Tech_Support" : "Tech Support",
+    "TitleTech" : "We will support you every step of the way",
+    "SubtitleTech" : "Consult a web data expert to maximize the potential of your data",
+    "TextTech1" : "24/7 support anytime, anywhere",
+    "TextTech2" : "Resolve subscription and billing issues effortlessly",
+    "TextTech3" : "Get immediate assistance for connectivity and configuration problems",
+    "Contact_Us" : "CONTACT US"
 }

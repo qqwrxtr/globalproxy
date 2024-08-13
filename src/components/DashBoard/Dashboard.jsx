@@ -2,8 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
-import "./dashboard.css";
-import { titleAnimationVariants } from "./../TitleAnimation/TitleAnimation.jsx";
+import s from "./dashboard.module.css";
+import { titleAnimationVariants } from "../../Utils/TitleAnimation/TitleAnimation.jsx";
 import dashboard from "./../../assets/img/dashboard.png";
 import Subpoints from "../Subpoints/Subpoints";
 
@@ -47,7 +47,7 @@ const Dashboard = () => {
     return (
         <motion.div 
             ref={ref}
-            className="container container_dashboard"
+            className={`container ${s.container_dashboard}`}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             id="dashboard"
@@ -55,7 +55,7 @@ const Dashboard = () => {
             <div className="row">
                 <div className="col-12 d-flex justify-content-center align-items-center">
                     <motion.div 
-                        className="dashboard_title text-center"
+                        className={s.dashboard_title + " text-center"}
                         initial={titleAnimationVariants.initial}
                         animate={isInView ? titleAnimationVariants.animate : titleAnimationVariants.initial}
                         transition={titleAnimationVariants.transition}
@@ -64,23 +64,23 @@ const Dashboard = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className="row row_content_dashboard flex-wrap-reverse d-flex flex-row-reverse align-items-center">
+            <div className={`row ${s.row_content_dashboard} flex-wrap-reverse d-flex flex-row-reverse align-items-center ${s.content_row}`}>
                 <div className="col-xl-6 col-12 d-flex flex-column align-items-center">
-                    <motion.div className="dashimg" variants={imageVariants}>
+                    <motion.div className={s.dashimg} variants={imageVariants}>
                         <img src={dashboard} alt="" className="img-fluid" loading="lazy" />
                     </motion.div>
                 </div>
                 <div className="col-xl-6 col-12 d-flex flex-column align-items-center">
-                    <motion.div className="text_dashboard" variants={containerVariants}>
-                        <div className="title_dashboard">
+                    <motion.div className={s.text_dashboard} variants={containerVariants}>
+                        <div className={s.title_dashboard}>
                             <p>{t("TitleDash")}</p>
                         </div>
                         {subpoints.map((offer, index) => (
-                            <motion.div className="subpoints" key={index} variants={itemVariants}>
-                                <Subpoints text={offer.text} />
+                            <motion.div className={s.subpoints} key={index} variants={itemVariants}>
+                                <Subpoints text={offer.text} variant="dashboard"/>
                             </motion.div>
                         ))}
-                        <motion.div className="button_get_start_dashboard" variants={itemVariants}>
+                        <motion.div className={s.button_get_start_dashboard} variants={itemVariants}>
                             <a href='https://proxy-lab.com/register' target="_blank">
                                 <button>{t("GetStart")}</button>
                             </a>

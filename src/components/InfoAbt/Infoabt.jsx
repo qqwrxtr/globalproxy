@@ -27,7 +27,7 @@ const InfoBlock = React.memo(() => {
     const { t } = useTranslation();
 
     return (
-        <div className="container_info w-100 d-flex align-items-center justify-content-center" style={{ marginTop: "49px", padding: "0 20px" }}>
+        <div className="container container_info w-100 d-flex align-items-center justify-content-center" style={{padding: "50px 20px 0" }}>
             <motion.div
                 className="row w-100 d-flex justify-content-center"
                 variants={containerVariants}

@@ -5,6 +5,7 @@ import Features from './components/Features/Features';
 import Header from './components/Header/Header';
 import InfoBlock from './components/InfoAbt/Infoabt';
 import Offers from './components/Offers/Offers';
+import TechSupport from './components/TechSupport/Techsupport';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Offers/>
         <Features/>
         <Dashboard/>
+        <TechSupport/>
       </main>
     </div>
   );

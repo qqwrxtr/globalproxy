@@ -17,7 +17,7 @@ import { motion, useInView } from "framer-motion";
 const Offers = () => {
     const { t } = useTranslation();
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: true, threshold: 0.2 });
 
     const offersData = useMemo(() => [
         {
@@ -60,16 +60,17 @@ const Offers = () => {
                 when: "beforeChildren",
                 staggerChildren: 0.2,
                 duration: 0.2,
+                ease: "easeOut",
             },
         },
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, scale: 0.95 },
+        hidden: { opacity: 0, scale: 0.9 },
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 0.5, ease: "easeInOut" },
+            transition: { duration: 0.6, ease: "easeOut" },
         },
     };
 

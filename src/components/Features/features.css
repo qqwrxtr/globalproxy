@@ -1,8 +1,8 @@
 .container_features{
-    margin-top: 100px;
+    padding: 50px 0;
 }
 .title_main_features{
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bold;
     color: var(--maincolor);
 }
@@ -10,7 +10,7 @@
 .row_features{
     margin: 0 10px;
     row-gap: 55px;
-    margin-top: 20px;
+    padding-top: 30px;
 }
 
 @media only screen and (max-width:1500px) {
