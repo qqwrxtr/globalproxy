@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./techsupport.css";
 import Subpoints from "../Subpoints/Subpoints";
-import globus from "./../../assets/img/globus.svg";
+import globus from "./../../assets/img/tech_img.png";
 import { titleAnimationVariants } from "./../../Utils/TitleAnimation/TitleAnimation.jsx";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -59,7 +59,7 @@ const TechSupport = () => {
                 className="row d-flex justify-content-center for_wrap_tech"
                 variants={containerVariants}
             >
-                <div className="col-md-4 col-12 col_gap_tech">
+                <div className="col-xl-4 col-12 col_gap_tech">
                     <motion.div className="text_part_tech" variants={itemVariants}>
                         <div className="title_tech">
                             <p>{t("TitleTech")}</p>
@@ -81,7 +81,7 @@ const TechSupport = () => {
                         </a>
                     </motion.div>
                 </div>
-                <motion.div className="col-md-4 col-12 img_tech d-flex align-items-center justify-content-lg-end justify-content-center" variants={itemVariants}>
+                <motion.div className="col-xl-4 col-12 img_tech d-flex align-items-center justify-content-center  justify-content-xl-end" variants={itemVariants}>
                     <div className="card_footer_img">
                         <img src={globus} alt="Globus" className="img-fluid" />
                     </div>
