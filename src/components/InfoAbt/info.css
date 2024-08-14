@@ -62,6 +62,25 @@
     padding-top: 10px;
 }
 
+@media only screen and (min-width:2000px) {
+    .bg_color{
+        max-width: 1920px;
+        height: 180px;
+    }
+    .title_info_abt{
+        font-size: 34px;
+    }
+    .subtitle_info_abt{
+        font-size: 25px;
+    }
+    .row_blocks{
+        gap: 30px;
+        margin-top: -15px !important;
+    }
+    .info_block{
+        max-width: 300px;
+    }
+}
 
 @media only screen and (max-width:1585px) {
     .title_info_abt{

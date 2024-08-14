@@ -39,6 +39,28 @@
     width: 100%;
 }
 
+@media only screen and (min-width:2000px) {
+    .features_block{
+        width: 550px;
+        height: 220px;
+    }
+    
+    .img_features img{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .title_features{
+        font-size: 30px;
+    }
+    
+    .subtitle_features{
+        font-size: 22px;
+        max-width: 440px;
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width:970px) {
 .features_block{
         width: 335px;

@@ -29,6 +29,31 @@
     display: none;
 }
 
+@media only screen and (min-width: 1930px) {
+    .subpoint_block_dashboard{
+        display: flex;
+        column-gap: 10px;
+    }
+    
+    .subpoint_block_tech{
+        display: flex;
+        column-gap: 10px;
+    }
+    
+    .img_subpoint_dashboard img , .img_subpoint_tech img{
+        width: 35px;
+        height: 35px;
+    }  
+    .subpoint_text_dashboard {
+        max-width: 800px;
+        width: 100%;
+        font-size: 30px;
+    }
+    .subpoint_text_tech {
+        font-size: 30px;
+    }
+}
+
 @media only screen and (max-width: 1199px) {
     .subpoint_block_dashboard {
         justify-content: center;

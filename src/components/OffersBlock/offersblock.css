@@ -154,6 +154,37 @@
 }
 }
 
+@media only screen and (min-width:2000px) {
+    .txt_title_blocks{
+        font-size: 30px;
+    }
+    .subtitle_offers{
+        font-size: 24px;
+        padding: 0 !important;
+        width: 400px !important;
+    }
+    .offers_block{
+        max-width: 600px !important;
+        max-height: 850px !important;
+        row-gap: 40px;
+    }
+    .price{
+        font-size: 50px;
+    }
+    .operators_title{
+        font-size: 30px;
+    }
+    .operators_img{
+        width: 400px;
+        height: 70px;
+    }
+    .buy_now button{
+        font-size: 30px !important;
+        width: 270px;
+        height: 80px !important;
+    }
+}
+
 @media only screen and (max-width:1550px) {
     .txt_title_blocks{
         font-size: 20px;

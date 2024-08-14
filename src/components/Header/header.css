@@ -153,6 +153,37 @@ a{
     column-gap: 30px;
 }
 
+@media only screen and (min-width:2000px) {  
+    .txt_logo{
+        font-size: 35px !important;
+    }
+    .navbar-brand img{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .nav-link{
+        font-size: 27px !important;
+    }
+    .button_login button,
+    .button_register button{
+        font-size: 25px;
+    }
+    .button_login button{
+        width: 150px;
+        height: 50px;
+    }
+    .button_register button{
+        width: 250px;
+        height: 50px;
+    }
+    .button_register img{
+        width: 35px;
+    }
+    .button_register p{
+        margin-top: -10px !important;
+    }
+}
+
 @media only screen and (max-width:1350px) {
     .button_register button{
         width: 150px;
@@ -213,3 +244,4 @@ a{
         display: none !important;
     }
 }
+

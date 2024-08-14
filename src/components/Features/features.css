@@ -10,6 +10,12 @@
     padding-top: 30px;
 }
 
+@media only screen and (min-width:2000px) {
+    .title_main_features{
+    font-size: 60px;
+    }
+}
+
 @media only screen and (max-width:1500px) {
     .title_main_features{
     font-size: 50px;

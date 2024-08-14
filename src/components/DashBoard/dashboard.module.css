@@ -59,6 +59,25 @@ p{
     font-weight: bold;
 }
 
+@media only screen and (min-width:2000px) {
+    .dashboard_title{
+        font-size: 60px;
+    }
+    .text_dashboard{
+        max-width: 1000px;
+    }
+    
+    .title_dashboard{
+        font-size: 46px;
+    }
+    
+    .button_get_start_dashboard a, .button_get_start_dashboard button{
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+    }
+}
+
 @media only screen and (max-width:1199px) {
     .text_dashboard{
         max-width: 100% !important;

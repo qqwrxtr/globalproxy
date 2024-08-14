@@ -43,6 +43,18 @@
     margin-top: -10px;
 }
 
+@media only screen and (min-width:2000px) {
+    .title_footer{
+        font-size: 55px;
+    }
+    .subtitle_footer{
+        font-size: 30px;
+    }
+    .row_content_footer{
+        max-width: 1950px;
+    }
+}
+
 @media only screen and (max-width:1111px) {
     .title_footer{
         font-size: 35px;

@@ -78,6 +78,17 @@
 }
 
 
+@media only screen and (min-width:2000px) {
+    .form-select{
+        width: 110px;
+        height: 50px;
+        font-size: 23px;
+    }
+    .lang-selector-wrapper::before{
+        margin-top: 5px;
+    }
+}
+
 @media only screen and (max-width:1350px) {
     .form-select{
         font-size: 16px;

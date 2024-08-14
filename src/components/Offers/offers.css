@@ -9,6 +9,14 @@
     font-weight: bold;
 }
 
+@media only screen and (min-width:2000px) {
+    .offerblock{
+        height: 850px;
+    }
+    .text_title_offer{
+        font-size: 60px;
+    }
+}
 
 @media only screen and (max-width:1399px) {
    .offerblock{
@@ -62,3 +70,4 @@
         font-size: 20px;
     }
 }
+
