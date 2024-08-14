@@ -10,15 +10,22 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
     const updateImgHeight = useCallback(() => {
         const initialHeight = parseInt(imgheight, 10);
         let newHeight = initialHeight;
-
-        if (window.innerWidth> 1920) newHeight += 8;
-        else if (window.innerWidth <= 1920) newHeight = initialHeight;
-        else if (window.innerWidth < 351) newHeight -= 18;
-        else if (window.innerWidth < 391) newHeight -= 15;
-        else if (window.innerWidth < 531) newHeight -= 10;
-
+    
+        if (window.innerWidth > 1920) {
+            newHeight += 8;
+        } else if (window.innerWidth < 351) {
+            newHeight -= 18;
+        } else if (window.innerWidth < 391) {
+            newHeight -= 15;
+        } else if (window.innerWidth < 531) {
+            newHeight -= 10;
+        } else {
+            newHeight = initialHeight;
+        }
+    
         setAdjustedImgHeight(`${newHeight}px`);
     }, [imgheight]);
+    
 
     useEffect(() => {
         updateImgHeight();
