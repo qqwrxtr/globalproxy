@@ -44,7 +44,7 @@ const Dashboard = () => {
                 })
                 .then(() => {
                     if (window.innerWidth >= 1200) {
-                        return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                        return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.3 } });
                     }
                 });
         }
