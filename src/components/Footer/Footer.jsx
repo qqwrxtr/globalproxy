@@ -83,10 +83,6 @@ const Footer = () => {
                                     100,
                                     '@'
                                 ]}
-                                
-                                
-                                
-                                
                                 wrapper="p"
                                 repeat={Infinity}
                                 speed={1}

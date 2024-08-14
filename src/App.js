@@ -20,10 +20,6 @@ function App() {
     });
   }, []);
 
-  if (!isReady) {
-    return ;
-  }
-
   return (
     <div className="app d-flex flex-column justify-content-center">
       <Suspense fallback={<div></div>}>

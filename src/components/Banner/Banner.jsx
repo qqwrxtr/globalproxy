@@ -31,11 +31,6 @@ const buttonVariants = {
 const Banner = memo(() => {
     const { t } = useTranslation();
 
-    if (!t) {
-        console.error("useTranslation hook did not return a function. Ensure the i18n instance is properly configured.");
-        return null;
-    }
-
     return (
         <div className="banner_container">
             <div className="row">

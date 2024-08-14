@@ -20,7 +20,7 @@
     border: 2px solid var(--maincolor);
     border-radius: 8px;
     padding: 5px 40px 5px 10px;
-    color: #7C3AED;
+    color: var(--maincolor);
     width: 103px;
     height: 40px;
     appearance: none;
