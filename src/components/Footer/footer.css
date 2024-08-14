@@ -43,6 +43,12 @@
     margin-top: -10px;
 }
 
+.animated_link{
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
+}
+
 @media only screen and (min-width:2000px) {
     .title_footer{
         font-size: 55px;

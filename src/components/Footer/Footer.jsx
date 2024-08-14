@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="row d-flex align-items-center justify-content-center row_content_footer">
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_one_footer_text" variants={itemVariants}>
-                        <a href="https://app.proxy-lab.com/proxies">
+                        <a href="https://app.proxy-lab.com/proxies" className="animated_link">
                             <div className="title_footer_part_one title_footer">
                                 <TypeAnimation
                                     sequence={[
@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_two_footer_text" variants={itemVariants}>
-                        <a href="">
+                        <a href="" className="animated_link">
                             <div className="title_footer_part_two title_footer">
                                 <TypeAnimation
                                 sequence={[
