@@ -13,7 +13,7 @@ const TechSupport = lazy(() => import('./components/TechSupport/Techsupport'));
 function App() {
   return (
     <div className="app d-flex flex-column justify-content-center">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <header>
           <Header />
         </header>

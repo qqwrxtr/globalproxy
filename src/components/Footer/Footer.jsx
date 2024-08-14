@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./footer.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -39,7 +40,26 @@ const Footer = () => {
                     <motion.div className="part_one_footer_text" variants={itemVariants}>
                         <a href="https://app.proxy-lab.com/proxies">
                             <div className="title_footer_part_one title_footer">
-                                <p>proxy-lab.com</p>
+                                <TypeAnimation
+                                    sequence={[
+                                        'proxy',
+                                        100,
+                                        'proxy-',
+                                        1000,
+                                        'proxy-lab',
+                                        500,
+                                        'proxy-lab.com',
+                                        500,
+                                        'proxy-lab',
+                                        1000,
+                                        'proxy-',
+                                        100,
+                                        'proxy',
+                                    ]}
+                                    wrapper="p"
+                                    repeat={Infinity}
+                                    speed={1}
+                                />
                             </div>
                         </a>
                         <div className="subtitle_footer_part_one subtitle_footer">
@@ -51,7 +71,26 @@ const Footer = () => {
                     <motion.div className="part_two_footer_text" variants={itemVariants}>
                         <a href="">
                             <div className="title_footer_part_two title_footer">
-                                <p>@ProxyLab</p>
+                                <TypeAnimation
+                                sequence={[
+                                    '@',
+                                    100,
+                                    '@Proxy',
+                                    500,
+                                    '@ProxyLab',
+                                    500,
+                                    '@Proxy',
+                                    100,
+                                    '@'
+                                ]}
+                                
+                                
+                                
+                                
+                                wrapper="p"
+                                repeat={Infinity}
+                                speed={1}
+                                />
                             </div>
                         </a>
                         <div className="subtitle_footer_part_two subtitle_footer">

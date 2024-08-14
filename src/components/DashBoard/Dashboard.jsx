@@ -28,6 +28,11 @@ const Dashboard = () => {
         if (isInView) {
             titleControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } })
                 .then(() => {
+                    if (window.innerWidth < 1200) {
+                        return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                    }
+                })
+                .then(() => {
                     return subpointsControls.start((index) => ({
                         opacity: 1,
                         y: 0,
@@ -38,7 +43,9 @@ const Dashboard = () => {
                     return buttonControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
                 })
                 .then(() => {
-                    return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                    if (window.innerWidth >= 1200) {
+                        return imgControls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+                    }
                 });
         }
     }, [isInView]);
@@ -67,6 +74,15 @@ const Dashboard = () => {
                     </div>
                 </div>
             </motion.div>
+            <div className="row d-xl-none d-flex dashboard_for_phone mt-lg-5 mt-md-44 mt-sm-3 mt-2">
+                <motion.div
+                    className={s.title_dashboard}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={titleControls}
+                >
+                    <p>{t("TitleDash")}</p>
+                </motion.div>
+            </div>
             <div
                 className={`row ${s.row_content_dashboard} flex-wrap-reverse d-flex flex-row align-items-center ${s.content_row}`}
             >
@@ -77,12 +93,27 @@ const Dashboard = () => {
                 >
                     <div className={s.text_dashboard}>
                         <motion.div
-                            className={s.title_dashboard}
+                            className={`${s.title_dashboard} d-xl-flex d-none`}
                             initial={{ opacity: 0, y: 20 }}
                             animate={titleControls}
                         >
                             <p>{t("TitleDash")}</p>
                         </motion.div>
+                        <motion.div
+                            className={`${s.dashimg} d-xl-none d-flex justify-content-center`}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={imgControls}
+                        >
+                            <motion.img
+                                src={dashboard}
+                                alt="Dashboard"
+                                className="img-fluid"
+                                loading="lazy"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imgControls}
+                            />
+                        </motion.div>
+
                         {subpoints.map((offer, index) => (
                             <motion.div
                                 className={s.subpoints}
@@ -110,7 +141,7 @@ const Dashboard = () => {
                     </div>
                 </motion.div>
                 <motion.div
-                    className="col-xl-6 col-12 d-flex flex-column align-items-center"
+                    className={`col-xl-6 col-12 d-flex flex-column align-items-center d-xl-flex d-none ${s.dashimg}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={imgControls}
                 >

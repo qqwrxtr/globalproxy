@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const TechSupport = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, threshold: 0.2 });
+    const isInView = useInView(ref, { once: true, threshold: 0.4 });
     const { t } = useTranslation();
 
     const subpoints = [
