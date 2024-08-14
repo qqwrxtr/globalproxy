@@ -31,13 +31,18 @@ const buttonVariants = {
 const Banner = memo(() => {
     const { t } = useTranslation();
 
+    if (!t) {
+        console.error("useTranslation hook did not return a function. Ensure the i18n instance is properly configured.");
+        return null;
+    }
+
     return (
         <div className="banner_container">
             <div className="row">
                 <div className="absolute_bg container-fluid">
-                    <img src={main_bglg} alt="" className='d-lg-block d-none d-md-none d-sm-none'/>
-                    <img src={main_bgmd} alt="" className='d-md-block d-lg-none d-sm-none d-none'/>
-                    <img src={main_bgsm} alt="" className='d-sm-block d-md-none'/>
+                    <img src={main_bglg} alt="" className='d-lg-block d-none d-md-none d-sm-none' />
+                    <img src={main_bgmd} alt="" className='d-md-block d-lg-none d-sm-none d-none' />
+                    <img src={main_bgsm} alt="" className='d-sm-block d-md-none' />
                 </div>
             </div>
             <div className="row d-flex flex-column align-items-center text-center text_banner">

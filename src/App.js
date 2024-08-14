@@ -1,5 +1,6 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import './App.css';
+import i18n from './i18n/i18n.jsx';
 
 const Banner = lazy(() => import('./components/Banner/Banner'));
 const Dashboard = lazy(() => import('./components/DashBoard/Dashboard'));
@@ -11,9 +12,21 @@ const Offers = lazy(() => import('./components/Offers/Offers'));
 const TechSupport = lazy(() => import('./components/TechSupport/Techsupport'));
 
 function App() {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    i18n.changeLanguage(i18n.language, () => {
+      setIsReady(true);
+    });
+  }, []);
+
+  if (!isReady) {
+    return ;
+  }
+
   return (
     <div className="app d-flex flex-column justify-content-center">
-      <Suspense>
+      <Suspense fallback={<div></div>}>
         <header>
           <Header />
         </header>
