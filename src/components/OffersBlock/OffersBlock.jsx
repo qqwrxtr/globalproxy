@@ -80,7 +80,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
                     </div>
                 </div>
                 <div className="buy_now">
-                    <a href="https://app.proxy-lab.com/purchase">
+                    <a href="https://app.proxy-lab.com/purchase" target="_blank">
                         <button>
                             <p>{t("BuyNow")}</p>
                         </button>
