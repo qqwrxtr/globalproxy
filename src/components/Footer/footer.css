@@ -59,6 +59,9 @@
     .row_content_footer{
         max-width: 1950px;
     }
+    .animated_link{
+        max-width: 420px;
+    }
 }
 
 @media only screen and (max-width:1111px) {
