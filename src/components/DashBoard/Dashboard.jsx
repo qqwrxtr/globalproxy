@@ -131,7 +131,7 @@ const Dashboard = () => {
                             animate={buttonControls}
                         >
                             <a
-                                href="https://app.proxy-lab.com/register"
+                                href="https://app.globalproxy.org/register"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

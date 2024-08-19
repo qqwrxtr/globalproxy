@@ -234,14 +234,35 @@ a{
 
 @media only screen and (max-width:440px) {  
    .txt_logo{
-    font-size: 18px !important;
+    font-size: 17px !important;
     padding-left: 5px !important;
    }
 }
 
-@media only screen and (max-width:331px) {  
+@media only screen and (max-width:380px) {  
+    .navbar{
+        padding: 30px 0px 0;
+    }
+    .container_header .container-fluid{
+       padding: 0 10px !important;
+    }
+}
+
+@media only screen and (max-width:380px) {  
     .txt_logo{
-        display: none !important;
+        font-size: 16px !important;
+    }
+}
+ 
+@media only screen and (max-width:341px) {  
+    .container_header .container-fluid{
+        padding: 0 5px !important;
+     }
+}
+
+@media only screen and (max-width:329px) {  
+    .txt_logo{
+        display: none;
     }
 }
 

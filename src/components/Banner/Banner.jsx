@@ -43,7 +43,7 @@ const Banner = memo(() => {
             <div className="row d-flex flex-column align-items-center text-center text_banner">
                 <div className="col-12 column_content_banner">
                     <motion.div className="title_banner" initial="hidden" animate="visible" variants={textVariant}>
-                        <h2>{t("Welcome to")} <span className="main_color">Proxy Lab!</span></h2>
+                        <h2>{t("Welcome to")} <span className="main_color">Global Proxy!</span></h2>
                     </motion.div>
                     <motion.div className="subtitle" initial="hidden" animate="visible" variants={textVariant}>
                         <p>{t("Banner_info")}</p>
@@ -55,7 +55,7 @@ const Banner = memo(() => {
                         variants={textVariant}
                     >
                         <motion.a
-                            href="https://app.proxy-lab.com/register"
+                            href="https://app.globalproxy.org/register"
                             target="_blank"
                             className="button"
                             variants={buttonVariants}

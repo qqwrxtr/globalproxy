@@ -111,7 +111,7 @@
     }
 }
 
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:365px) {
     .lang-selector-wrapper::before{
         content: "";
         display: none;

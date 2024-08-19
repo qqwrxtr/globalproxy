@@ -57,7 +57,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
                             <p className="position-relative">
                                 <span className="dollar">$</span>
                                 <span className="price">{price}</span>
-                                <span className="time_price">/ {index === 0 ? `2 ${t("week")}` : index === 1 ? `1 ${t("month")}` : `2 ${t("month")}`}</span>
+                                <span className="time_price">/ {index === 0 ? `1 ${t("week")}` : index === 1 ? `2 ${t("week")}` : `1 ${t("month")}`}</span>
                             </p>
                         </div>
                     ))}
@@ -80,7 +80,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
                     </div>
                 </div>
                 <div className="buy_now">
-                    <a href="https://app.proxy-lab.com/purchase" target="_blank">
+                    <a href="https://app.globalproxy.org/purchase" target="_blank">
                         <button>
                             <p>{t("BuyNow")}</p>
                         </button>
