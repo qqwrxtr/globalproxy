@@ -57,7 +57,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
                             <p className="position-relative">
                                 <span className="dollar">$</span>
                                 <span className="price">{price}</span>
-                                <span className="time_price">/ {index === 0 ? `1 ${t("week")}` : index === 1 ? `2 ${t("week")}` : `1 ${t("month")}`}</span>
+                                <span className="time_price">/ {index === 0 ? `1 ${t("weeks")}` : index === 1 ? `2 ${t("week")}` : `1 ${t("month")}`}</span>
                             </p>
                         </div>
                     ))}

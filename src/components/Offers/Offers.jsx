@@ -45,7 +45,7 @@ const Offers = () => {
             flag: moldova,
             subtitle: t("Subtitle"),
             price1: "15",
-            price2: "20",
+            price2: "25",
             price3: "45",
             operators: { operator1: orange, operator2: moldcell, operator3: unite },
             imgheight: "36",
