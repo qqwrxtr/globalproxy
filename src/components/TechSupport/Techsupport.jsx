@@ -76,7 +76,7 @@ const TechSupport = () => {
                         ))}
                     </motion.div>
                     <motion.div className="contact_us_button_tech" variants={itemVariants} transition={{ delay: 1 }}>
-                        <a href="#!" target="_blank">
+                        <a href="https://t.me/GlobalProxy_support" target="_blank">
                             <button>{t("Contact_Us")}</button>
                         </a>
                     </motion.div>
