@@ -70,7 +70,7 @@ const Header = React.memo(() => {
             >
                 <div className="container-fluid">
                     <motion.div className="navbar-brand d-flex align-items-center" variants={itemVariants}>
-                        <img src={proxylogo} alt="Proxy Lab Logo" className="img_logo" />
+                        <img src={proxylogo} alt="GlobalProxy Logo" className="img_logo" />
                         <p className="txt_logo">Global Proxy</p>
                     </motion.div>
 

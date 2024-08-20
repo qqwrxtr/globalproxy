@@ -1,1 +1,1 @@
-Welcome to Proxy Lab, a mobile proxy with fast speed and good prices :)
+Welcome to GlobalProxy, a mobile proxy with fast speed and good prices :)
