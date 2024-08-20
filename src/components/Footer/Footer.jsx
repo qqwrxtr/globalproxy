@@ -40,7 +40,7 @@ const Footer = () => {
                     <motion.div className="part_one_footer_text" variants={itemVariants}>
                         <a href="https://app.globalproxy.org/proxies" className="animated_link" target="_blank">
                             <div className="title_footer_part_one title_footer">
-                                <p>global-proxy.org</p>
+                                <p>globalproxy.org</p>
                             </div>
                         </a>
                         <div className="subtitle_footer_part_one subtitle_footer">
