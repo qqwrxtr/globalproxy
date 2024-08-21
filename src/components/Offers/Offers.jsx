@@ -19,14 +19,17 @@ const Offers = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
+
     const offersData = useMemo(() => [
         {
             title: "4G Romania",
             flag: romania,
             subtitle: t("Subtitle"),
-            price1: "20",
-            price2: "35",
-            price3: "60",
+            pricePeriods: [
+                { price: "20", periodType: "week", count: 1 },
+                { price: "35", periodType: "weeks", count: 2 },
+                { price: "60", periodType: "month", count: 1 },
+            ],
             operators: { operator1: telero },
             imgheight: "40",
         },
@@ -34,9 +37,11 @@ const Offers = () => {
             title: "4G Denmark",
             flag: denmark,
             subtitle: t("Subtitle"),
-            price1: "30",
-            price2: "50",
-            price3: "80",
+            pricePeriods: [
+                { price: "30", periodType: "week", count: 1 },
+                { price: "50", periodType: "weeks", count: 2 },
+                { price: "80", periodType: "month", count: 1 },
+            ],
             operators: { operator1: three, operator2: telia, operator3: lebara },
             imgheight: "40",
         },
@@ -44,9 +49,11 @@ const Offers = () => {
             title: "4G Moldova",
             flag: moldova,
             subtitle: t("Subtitle"),
-            price1: "15",
-            price2: "25",
-            price3: "45",
+            pricePeriods: [
+                { price: "15", periodType: "week", count: 1 },
+                { price: "25", periodType: "weeks", count: 2 },
+                { price: "45", periodType: "month", count: 1 },
+            ],
             operators: { operator1: orange, operator2: moldcell, operator3: unite },
             imgheight: "36",
         },
@@ -105,9 +112,7 @@ const Offers = () => {
                             title={offer.title}
                             flag={offer.flag}
                             subtitle={offer.subtitle}
-                            price1={offer.price1}
-                            price2={offer.price2}
-                            price3={offer.price3}
+                            pricePeriods={offer.pricePeriods}
                             operators={offer.operators}
                             imgheight={offer.imgheight}
                         />

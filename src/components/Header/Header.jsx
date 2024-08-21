@@ -40,7 +40,6 @@ const navItemVariants = {
 
 const Header = React.memo(() => {
     const { t, i18n } = useTranslation();
-
     const menuItems = ["Offers", "Features", "Dashboard", "Support"] || [];
 
     const renderMenuItems = useCallback(() => (

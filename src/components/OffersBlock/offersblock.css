@@ -64,7 +64,7 @@
     width: 395px;
 }
 
-.time_price{
+.price_period{
     font-size: 24px;
     font-weight: bold;
 }
@@ -259,7 +259,7 @@
     .operators_title{
         font-size: 20px;
     }
-    .time_price{
+    .price_period{
         font-size: 20px;
     }
 }
@@ -280,7 +280,7 @@
     .price{
         font-size: 28px;
     }
-    .time_price{
+    .price_period{
         font-size: 17px;
     }
     .operators_img{
@@ -326,7 +326,7 @@
     .price{
         font-size: 24px;
     }
-    .time_price{
+    .price_period{
         font-size: 16px;
     }
     .operators_img{
@@ -376,7 +376,7 @@
     .price{
         font-size: 20px;
     }
-    .time_price{
+    .price_period{
         font-size: 14px;
     }
     .operators_img{
@@ -431,7 +431,7 @@
     .price{
         font-size: 18px;
     }
-    .time_price{
+    .price_period{
         font-size: 12px;
     }
     .operators_img{

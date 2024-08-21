@@ -3,7 +3,7 @@ import "./offersblock.css";
 import top from "./../../assets/img/top.svg";
 import { useTranslation } from "react-i18next";
 
-const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3, operators }) => {
+const OffersBlock = ({ imgheight, title, flag, subtitle, pricePeriods, operators }) => {
     const { t } = useTranslation();
     const [adjustedImgHeight, setAdjustedImgHeight] = useState(imgheight);
 
@@ -51,13 +51,13 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, price1, price2, price3,
             </div>
             <div className="block2">
                 <div className="price_block d-flex flex-column align-items-center justify-content-center">
-                    {[price1, price2, price3].map((price, index) => (
+                    {pricePeriods.map((pricePeriod, index) => (
                         <div key={index} className={`price${index + 1}`}>
                             {index === 1 && <img src={top} alt="" className="position-absolute" />}
                             <p className="position-relative">
                                 <span className="dollar">$</span>
-                                <span className="price">{price}</span>
-                                <span className="time_price">/ {index === 0 ? `1 ${t("weeks")}` : index === 1 ? `2 ${t("week")}` : `1 ${t("month")}`}</span>
+                                <span className="price">{pricePeriod.price}</span>
+                                <span className="price_period">/ {pricePeriod.count} {t(pricePeriod.periodType)}</span>
                             </p>
                         </div>
                     ))}

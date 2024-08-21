@@ -4,6 +4,9 @@ import { initReactI18next } from "react-i18next";
 import translationsInEng from './../language/en/translation.json';
 import translationsInRussian from './../language/ru/translation.json';
 
+const browserLanguage = navigator.language || navigator.userLanguage;
+const lng = browserLanguage.split("-")[0];
+
 const resources = {
   en: {
     translation: translationsInEng
@@ -17,9 +20,9 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en",
+    lng: lng,
     debug: true,
-    fallbackLng: "ru",
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false
     },
