@@ -21,7 +21,6 @@ const Dashboard = () => {
         { text: t("TextDash2") },
         { text: t("TextDash3") },
         { text: t("TextDash4") },
-        { text: t("TextDash5") },
     ];
 
     React.useEffect(() => {
