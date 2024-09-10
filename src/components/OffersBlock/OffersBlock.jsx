@@ -3,7 +3,7 @@ import "./offersblock.css";
 import top from "./../../assets/img/top.svg";
 import { useTranslation } from "react-i18next";
 
-const OffersBlock = ({ imgheight, title, flag, subtitle, pricePeriods, operators }) => {
+const OffersBlock = ({ imgheight, country, flag, subtitle, pricePeriods, operators }) => {
     const { t } = useTranslation();
     const [adjustedImgHeight, setAdjustedImgHeight] = useState(imgheight);
 
@@ -39,7 +39,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, pricePeriods, operators
             <div className="block1 d-flex align-items-center justify-content-center flex-column">
                 <div className="title_title d-flex align-items-center justify-content-center">
                     <div className="txt_title_blocks">
-                        <p>{t("Mobile")} Proxy {title}</p>
+                        <p>{t("MobileProxy")} 4G {t(country)}</p>
                     </div>
                     <div className="img_title_blocks">
                         <img src={flag} alt="" />
@@ -80,7 +80,7 @@ const OffersBlock = ({ imgheight, title, flag, subtitle, pricePeriods, operators
                     </div>
                 </div>
                 <div className="buy_now">
-                    <a href="https://app.globalproxy.org/purchase" target="_blank">
+                    <a href="https://app.globalproxy.org/purchase" target="_blank" rel="noreferrer">
                         <button>
                             <p>{t("BuyNow")}</p>
                         </button>

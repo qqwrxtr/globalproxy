@@ -1,23 +1,26 @@
-import React, { useCallback } from "react";
+import React from "react";
 import "./langchanger.css";
 import i18n from "../../i18n/i18n";
 
 const LanguageSelector = () => {
-    const chooseLanguage = useCallback((e) => {
+    const languages = ['en', 'ru'];
+    const changeLanguage = (e) => {
         e.preventDefault();
-        const newLanguage = e.target.value;
-        i18n.changeLanguage(newLanguage);
-    }, []);
+        i18n.changeLanguage(e.target.value);
+    }
 
     return (
         <div className="lang-selector-wrapper">
             <select
-                onChange={chooseLanguage}
+                onChange={changeLanguage}
                 className="form-select"
                 aria-label="Select language"
             >
-                <option value="en">EN</option>
-                <option value="ru">RU</option>
+                {languages.map((lang) => (
+                    <option key={lang} value={lang} selected={i18n.language === lang}>
+                        {lang.toUpperCase()}
+                    </option>
+                ))}
             </select>
         </div>
     );

@@ -22,7 +22,7 @@ const Offers = () => {
 
     const offersData = useMemo(() => [
         {
-            title: "4G Romania",
+            country: "Romania",
             flag: romania,
             subtitle: t("Subtitle"),
             pricePeriods: [
@@ -34,7 +34,7 @@ const Offers = () => {
             imgheight: "40",
         },
         {
-            title: "4G Denmark",
+            country: "Denmark",
             flag: denmark,
             subtitle: t("Subtitle"),
             pricePeriods: [
@@ -46,7 +46,7 @@ const Offers = () => {
             imgheight: "40",
         },
         {
-            title: "4G Moldova",
+            country: "Moldova",
             flag: moldova,
             subtitle: t("Subtitle"),
             pricePeriods: [
@@ -109,12 +109,7 @@ const Offers = () => {
                         variants={itemVariants}
                     >
                         <OffersBlock
-                            title={offer.title}
-                            flag={offer.flag}
-                            subtitle={offer.subtitle}
-                            pricePeriods={offer.pricePeriods}
-                            operators={offer.operators}
-                            imgheight={offer.imgheight}
+                            {...offer}
                         />
                     </motion.div>
                 ))}
