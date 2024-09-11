@@ -131,8 +131,6 @@ const Dashboard = () => {
                         >
                             <a
                                 href="https://app.globalproxy.org/register"
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
                                 <button>{t("GetStart")}</button>
                             </a>

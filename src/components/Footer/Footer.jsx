@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="row d-flex align-items-center justify-content-center row_content_footer">
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_one_footer_text" variants={itemVariants}>
-                        <a href="https://app.globalproxy.org/proxies" className="animated_link" target="_blank" rel="noreferrer">
+                        <a href="https://app.globalproxy.org/proxies" className="animated_link">
                             <div className="title_footer_part_one title_footer">
                                 <p>globalproxy.org</p>
                             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
                 <div className="col-12 col-md-6 text-md-start text-center">
                     <motion.div className="part_two_footer_text" variants={itemVariants}>
-                        <a href="https://t.me/GlobalProxy_support" className="animated_link" target="_blank" rel="noreferrer">
+                        <a href="https://t.me/GlobalProxy_support" className="animated_link">
                             <div className="title_footer_part_two title_footer">
                                 <p>@GlobalProxy</p>
                             </div>

@@ -56,7 +56,6 @@ const Banner = memo(() => {
                     >
                         <motion.a
                             href="https://app.globalproxy.org/register"
-                            target="_blank"
                             className="button"
                             variants={buttonVariants}
                             initial="initial"

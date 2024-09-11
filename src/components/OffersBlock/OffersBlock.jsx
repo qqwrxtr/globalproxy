@@ -80,7 +80,7 @@ const OffersBlock = ({ imgheight, country, flag, subtitle, pricePeriods, operato
                     </div>
                 </div>
                 <div className="buy_now">
-                    <a href="https://app.globalproxy.org/purchase" target="_blank" rel="noreferrer">
+                    <a href="https://app.globalproxy.org/purchase">
                         <button>
                             <p>{t("BuyNow")}</p>
                         </button>

@@ -83,7 +83,6 @@ const Header = React.memo(() => {
 
                         <motion.a
                             href="https://app.globalproxy.org/register"
-                            target="_blank"
                             className="button_register"
                             variants={itemVariants}
                         >
@@ -95,7 +94,6 @@ const Header = React.memo(() => {
 
                         <motion.a
                             href="https://app.globalproxy.org/login"
-                            target="_blank"
                             className="button_login"
                             variants={itemVariants}
                         >
