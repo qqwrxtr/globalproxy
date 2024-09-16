@@ -1,29 +1,32 @@
-import React from "react";
 import "./langchanger.css";
+import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
 import i18n from "../../i18n/i18n";
 
 const LanguageSelector = () => {
-    const languages = ['en', 'ru'];
-    const changeLanguage = (e) => {
-        e.preventDefault();
-        i18n.changeLanguage(e.target.value);
-    }
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    return (
-        <div className="lang-selector-wrapper">
-            <select
-                onChange={changeLanguage}
-                className="form-select"
-                aria-label="Select language"
-            >
-                {languages.map((lang) => (
-                    <option key={lang} value={lang} selected={i18n.language === lang}>
-                        {lang.toUpperCase()}
-                    </option>
-                ))}
-            </select>
-        </div>
-    );
+  const changeLanguage = (lang) => {
+    navigate(`/${lang}${location.pathname.replace(`/${i18n.language}`, "")}`);
+  };
+
+  return (
+    <div className="lang-selector-wrapper">
+      <select
+        onChange={(e) => changeLanguage(e.target.value)}
+        className="form-select"
+        aria-label="Select language"
+        value={i18n.language}
+      >
+        {["en", "ru"].map((lang) => (
+          <option key={lang} value={lang}>
+            {lang.toUpperCase()}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 };
 
 export default React.memo(LanguageSelector);

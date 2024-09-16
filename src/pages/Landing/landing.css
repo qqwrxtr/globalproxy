@@ -1,0 +1,36 @@
+#root {
+  --maincolor: #7C3AED;
+  --hovermain: #8750e7;
+  --mainanother: #7B00D3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.margin_for_container {
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 2560px;
+  overflow: hidden;
+}
+
+body {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.dark {
+  background-color: #121212;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}

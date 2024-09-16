@@ -1,24 +1,24 @@
-p{
+p {
     margin: 0 !important;
 }
 
-.container_dashboard{
+.container_dashboard {
     padding-top: 50px;
     color: var(--maincolor);
 }
 
-.dashboard_title{
+.dashboard_title {
     font-size: 50px;
     font-weight: bold;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.row_content_dashboard{
+.row_content_dashboard {
     padding: 20px 50px;
 }
 
-.text_dashboard{
+.text_dashboard {
     max-width: 730px;
     width: 100%;
     display: flex;
@@ -26,22 +26,23 @@ p{
     flex-direction: column;
 }
 
-.title_dashboard{
+.title_dashboard {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.dashimg img{
+.dashimg img {
     border: 1px solid var(--maincolor);
     border-radius: 10px;
 }
 
-.button_get_start_dashboard{
+.button_get_start_dashboard {
     margin-top: 20px;
 }
 
-.button_get_start_dashboard a, .button_get_start_dashboard button{
+.button_get_start_dashboard a,
+.button_get_start_dashboard button {
     width: 200px;
     height: 60px;
     background-color: var(--maincolor);
@@ -60,18 +61,20 @@ p{
 }
 
 @media only screen and (min-width:2000px) {
-    .dashboard_title{
+    .dashboard_title {
         font-size: 60px;
     }
-    .text_dashboard{
+
+    .text_dashboard {
         max-width: 1000px;
     }
-    
-    .title_dashboard{
+
+    .title_dashboard {
         font-size: 46px;
     }
-    
-    .button_get_start_dashboard a, .button_get_start_dashboard button{
+
+    .button_get_start_dashboard a,
+    .button_get_start_dashboard button {
         width: 300px;
         height: 70px;
         font-size: 30px;
@@ -79,58 +82,67 @@ p{
 }
 
 @media only screen and (max-width:1199px) {
-    .text_dashboard{
+    .text_dashboard {
         max-width: 100% !important;
     }
-    .title_dashboard{
+
+    .title_dashboard {
         text-align: center;
         font-size: 30px;
         max-width: 100% !important;
     }
-    .subpoints{
+
+    .subpoints {
         display: flex;
         justify-content: center !important;
         align-items: center;
     }
-    .dashboard_title{
+
+    .dashboard_title {
         font-size: 50px;
     }
-    .row_content_dashboard{
+
+    .row_content_dashboard {
         margin: 0 !important;
     }
-    .button_get_start_dashboard{
+
+    .button_get_start_dashboard {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .content_row{
+
+    .content_row {
         padding-top: 0px !important;
     }
 }
 
 @media only screen and (max-width:660px) {
-    .title_dashboard{
+    .title_dashboard {
         font-size: 28px;
     }
-    .row_content_dashboard{
+
+    .row_content_dashboard {
         padding: 0;
     }
 }
 
 @media only screen and (max-width:610px) {
-    .title_dashboard{
+    .title_dashboard {
         font-size: 26px;
     }
 }
 
 @media only screen and (max-width:530px) {
-    .dashboard_title{
+    .dashboard_title {
         font-size: 40px;
     }
-    .title_dashboard{
+
+    .title_dashboard {
         font-size: 20px;
     }
-    .button_get_start_dashboard button{
+
+    .button_get_start_dashboard button {
         font-size: 18px;
         width: 170px;
         height: 55px;
@@ -138,16 +150,17 @@ p{
 }
 
 @media only screen and (max-width:440px) {
-    .dashboard_title{
+    .dashboard_title {
         font-size: 35px;
     }
-    .title_dashboard{
+
+    .title_dashboard {
         font-size: 18px;
     }
 }
 
 @media only screen and (max-width:395px) {
-    .subpoints{
+    .subpoints {
         display: flex;
         justify-content: start !important;
         align-items: center;
@@ -156,13 +169,16 @@ p{
 }
 
 @media only screen and (max-width:390px) {
-    .dashboard_title{
+    .dashboard_title {
         font-size: 24px;
     }
-    .title_dashboard{
+
+    .title_dashboard {
         font-size: 16px;
     }
-    .button_get_start_dashboard button , .button_get_start_dashboard a {
+
+    .button_get_start_dashboard button,
+    .button_get_start_dashboard a {
         font-size: 14px;
         width: 140px;
         height: 50px;
