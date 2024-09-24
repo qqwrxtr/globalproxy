@@ -1,6 +1,8 @@
 import "./banner.css";
 import React, { memo } from "react";
-import main_bgsm from "./../../assets/video/mainbg_425.gif";
+import main_1920 from "./../../assets/video/mainbg_1920.jpg";
+import main_425 from "./../../assets/video/mainbg_425.jpg";
+
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -33,7 +35,9 @@ const Banner = memo(() => {
     <div className="banner_container">
       <div className="row">
         <div className="absolute_bg container-fluid">
-          <img src={main_bgsm} alt="" className="w-full" />
+          <img src={main_1920} alt="" className="w-100 d-none d-lg-block" />
+          <img src={main_425} alt="" className="w-100 d-lg-none d-block" />
+
         </div>
       </div>
       <div className="row d-flex flex-column align-items-center text-center text_banner">
