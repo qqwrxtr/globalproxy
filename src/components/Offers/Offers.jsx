@@ -27,8 +27,8 @@ const Offers = () => {
         subtitle: t("Subtitle"),
         pricePeriods: [
           { price: "20", periodType: "week", count: 1 },
-          { price: "35", periodType: "weeks", count: 2 },
-          { price: "60", periodType: "month", count: 1 },
+          { price: "30", periodType: "weeks", count: 2 },
+          { price: "50", periodType: "month", count: 1 },
         ],
         operators: { operator1: telero },
         imgheight: "40",
@@ -50,9 +50,9 @@ const Offers = () => {
         flag: moldova,
         subtitle: t("Subtitle"),
         pricePeriods: [
-          { price: "15", periodType: "week", count: 1 },
-          { price: "25", periodType: "weeks", count: 2 },
-          { price: "45", periodType: "month", count: 1 },
+          { price: "10", periodType: "week", count: 1 },
+          { price: "20", periodType: "weeks", count: 2 },
+          { price: "40", periodType: "month", count: 1 },
         ],
         operators: { operator1: orange, operator2: moldcell, operator3: unite },
         imgheight: "36",
